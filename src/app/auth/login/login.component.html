@@ -1,0 +1,26 @@
+<div class="login">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="input">
+            <br><input name="email" type="email" placeholder="   EMAIL"
+            ngModel
+            required
+            email
+            ><br><br>
+            <input type="password" name="password" placeholder="   PASSWORD"
+            ngModel
+            required
+            ><br><br>
+        </div>
+        <div class="button">
+            <button class="submit" type="submit" name="login" value="Login">LOGIN</button>
+        </div>
+        <div class="OR">
+            <br>
+            <p class="orfb">--OR--</p>
+        </div>
+        <div class="alternate">
+            <button class="google" type="button" name="Google"></button>&nbsp;
+            <button type="button" class="fb" name="fb"></button>
+        </div>
+    </form>
+</div>

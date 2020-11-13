@@ -1,0 +1,41 @@
+.app-container{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100vh;
+  background-color: #f7f5f9;
+}
+
+.logo-group{
+  display: flex;
+  flex-basis: 60%;
+  background-color: #1c437e;
+  align-items: center;
+}
+
+.logo-text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.logo{
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  height: 15vh;
+  padding-right: 2vh;
+}
+
+.text{
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
