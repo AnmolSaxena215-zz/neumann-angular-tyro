@@ -21,12 +21,13 @@ export class LoginComponent implements OnInit {
     }
     const email = form.value.email;
     const password = form.value.password;
-    console.log(email,password)
     this.authService.userLogin(email, password)
     .subscribe(resData => {
+      console.log("logged in");
       console.log(resData);
     },
     errorMessage => {
+      console.log("There is an error");
       console.log(errorMessage);
       this.error = errorMessage;
     });

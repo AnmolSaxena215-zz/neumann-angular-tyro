@@ -1,24 +1,34 @@
 <div class="signup">
-    <div class="alert" *ngIf="error">
-        <p>{{ error }}</p>
-    </div>
     <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
         <div class="input">
             <br><input name="name" type="text" placeholder="   NAME"
             ngModel
             required
-            ><br><br>
+            #name="ngModel">
+            <span class="invalid"
+            *ngIf="!name.valid && name.touched"
+            title="Name must be more than 2 characters long"></span><br/><br/>
             <input type="email" name="email" placeholder="   EMAIL"
             ngModel
             required
             email
-            ><br><br>
+            #email="ngModel">
+            <span class="invalid" *ngIf="!email.valid && email.touched"
+            title="Please enter a valid email id"></span><br/><br/>
             <input type="password" name="password" placeholder="   PASSWORD"
             ngModel
             required
             minlength="6"
-            ><br><br>
+            #password="ngModel">
+            <span class="invalid" *ngIf="!password.valid && password.touched"
+            title="Password should be of 6 or more characters"
+            ></span><br/><br/>
         </div>
+
+        <div class="error" *ngIf="error">
+            <p>{{ error }}</p>
+        </div>
+
         <div class="button">
             <button class="submit" type="submit" name="signup">SIGNUP</button>
         </div>

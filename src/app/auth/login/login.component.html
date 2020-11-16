@@ -5,14 +5,26 @@
             ngModel
             required
             email
-            ><br><br>
+            #email="ngModel">
+            <span class="invalid" *ngIf="!email.valid && email.touched"
+            title="Please enter a valid email id"
+            ></span><br><br/>
             <input type="password" name="password" placeholder="   PASSWORD"
             ngModel
             required
-            ><br><br>
+            minlength="6"
+            #password="ngModel">
+            <span class="invalid" *ngIf="!password.valid && password.touched"
+            title="Password should be of minimum 6 characters"
+            ></span><br><br/>
+        </div>
+
+        <div class="error" *ngIf="error">
+            <p>{{error}}</p>
         </div>
         <div class="button">
             <button class="submit" type="submit" name="login" value="Login">LOGIN</button>
+            <!-- <span class="invalid" *ngIf="!loginForm.valid && ">Please enter correct values</span> -->
         </div>
         <div class="OR">
             <br>
