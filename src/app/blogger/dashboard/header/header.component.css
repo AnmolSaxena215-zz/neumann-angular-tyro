@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.TitleBar{
+    position: relative;
+    width: 100%;
+    height: 11vh;
+    background-color: #1C437E;
+}
+.home{
+    margin-left: 4.5%;
+    padding-top: 1.2%;
+    width: 3.88%;
+    height: 4.68%;
+}
+.tyro1{
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+}
+.tyro{
+    margin-left: 9.5%;
+    margin-top: .75%;
+}
+.line{
+    position: relative;
+    margin-top: -2%;
+    width: 1px;
+    height: 47px;
+    padding-left: 16%;
+    color: #DBE1E9;
+}
+p{
+    font-weight: 1;
+    max-width: -1%;
+    font-size: 35px;
+    color: #dbe1e9;
+}
+.text{
+    position: relative;
+    margin-top: -3.5%;
+    font-size: x-large;
+    padding-left: 18.89%;
+    color: #F7F8F9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+}
+.bell{
+    background-color: #1C437E;
+    border: none;
+    width: 1.6%;
+    height:38%;
+    margin-top: -3%;
+    margin-left: 70.54%;
+    align-content: unset;
+}
+.wishlist{
+    position: relative;
+    tab-size: 4;
+    background-color: #1C437E;
+    border: none;
+    width: 1.4%;
+    height:38%;
+    margin-top: -6.25%;
+    margin-left: 75.4%;
+}
+.new-post{
+    background-color: #FF9800;
+    border: none;
+    border-radius: 3px;
+    width: 18vh;
+    height: 5vh;
+    font-weight: 500;
+}
+button{
+    font-size: 12px;
+}
+.post-button{
+    padding-left: 79.91%;
+    margin-top: -5%;
+}
+.profile{
+    position: relative;
+    margin-left: 70%;
+    margin-top: -2.0%;
+}
