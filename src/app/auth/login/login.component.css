@@ -14,7 +14,7 @@ input {
 }
 
 button {
-    width: 38%;
+    width: 25%;
     height: 6.5vh;
     color: white;
     font-size: smaller;
@@ -69,10 +69,6 @@ button {
     tab-size: 4;
 }
 
-span {
-    color: red;
-}
-
 .invalid{
     color: red;
     background-image: url(../../../assets/images/warningSmall.png);
@@ -80,9 +76,11 @@ span {
     background-size: 13px;
     background-position: center;
     position: absolute;
-    right: 5%;
     width:30px;
     height:35px;
+}
+
+.error{
     color: red;
 }
 

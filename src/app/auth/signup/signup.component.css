@@ -79,7 +79,7 @@ input{
 }
 
 button{
-  width: 35%;
+  width: 25%;
   height: 6.5vh;
   color: white;
   font-size: smaller;
@@ -135,9 +135,11 @@ button{
     background-size: 13px;
     background-position: center;
     position: absolute;
-    right: 5%;
     width:30px;
     height:35px;
+}
+
+.error{
     color: red;
 }
 
