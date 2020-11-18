@@ -1,0 +1,20 @@
+<div class="blog-list" *ngFor="let blog of blogList">
+    <div class="author">
+        <div class="profile">
+            <img [src]="blog.imagePath" alt="{{ blog.name}}" class="img-responsive" style="max-height: 50px;">
+        </div>
+        <div class="name">
+            <a href="#">
+            {{ blog.name}}</a>
+        </div>
+    </div>
+
+    <div class="blog">
+        <div class="title">
+            <a href="#">{{ blog.title}}</a>
+        </div>
+        <div class="description">{{ blog.description}}</div>
+        <div class="date">{{ blog.date.toDateString()}}</div>
+    </div>
+    <br/>
+</div>

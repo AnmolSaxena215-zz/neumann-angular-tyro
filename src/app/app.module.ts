@@ -10,7 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './auth/dashboard/dashboard.component';
+import { BloggerModule } from './blogger/blogger.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { DashboardComponent } from './auth/dashboard/dashboard.component';
     AuthComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,8 @@ import { DashboardComponent } from './auth/dashboard/dashboard.component';
     FormsModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    BloggerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
