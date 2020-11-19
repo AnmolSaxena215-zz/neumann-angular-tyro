@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.people-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-list {
+    margin-right: 10%;
+}
+
+.people {
+    margin-bottom: 4%;
+}
+
+.name {
+    font-size: xx-small;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+}
+
+.plus{
+    height: 40px;
+    width: 40px;
+}
+
+.see-more-text{
+    font-size: xx-small;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

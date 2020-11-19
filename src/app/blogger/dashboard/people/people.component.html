@@ -1,0 +1,27 @@
+<div class="people-container">
+    <div class="people">
+        PEOPLE TO FOLLOW
+    </div>
+
+    <div class="people-list">
+        <div class="blog-list" *ngFor="let people of peopleToFollow">
+            <a href="#">
+                <div class="pics">
+                    <img [src]="people.imagePath" alt="{{ people.name }}" class="pic" style="max-height: 40px;">
+                </div>
+                <div class="name">
+                    {{ people.name }}
+                </div>
+            </a>
+        </div>
+        <a href="#">
+            <div class="see-more">
+                <img src="../../../../assets/images/plus.png" class="plus">
+            </div>
+            <div class="see-more-text">
+                See more
+            </div>
+        </a>
+
+    </div>
+</div>
