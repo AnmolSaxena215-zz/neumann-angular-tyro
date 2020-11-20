@@ -12,8 +12,12 @@ export class BlogListComponent implements OnInit {
     new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
     new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
     new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
-  ] 
-  ;
+    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
+    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
+    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
+    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
+    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date())
+  ];
 
   constructor() { }
 
