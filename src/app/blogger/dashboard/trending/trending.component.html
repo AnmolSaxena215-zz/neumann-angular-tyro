@@ -5,7 +5,7 @@
         </div>
 
         <div class="blogs">
-            <div class="blog-list" *ngFor="let blog of trendingList">
+            <div class="blog-list" *ngFor="let blog of trending">
                 <div class="position">
                     {{ blog.position }}
                 </div>
@@ -13,11 +13,11 @@
                 <div class="blog-details">
                     <div class="author">
                         <div class="profile">
-                            <img [src]="blog.imagePath" alt="{{ blog.name }}" class="pic">
+                            <img [src]="blog.imagePath" alt="profile" class="pic">
                         </div>
                         <div class="name">
                             <a href="#">
-                                {{ blog.name}}</a>
+                                {{ blog.createdBy }}</a>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                         <a href="#">{{ blog.title}}</a>
                     </div>
 
-                    <div class="date">{{ blog.date.toDateString()}}</div>
+                    <div class="date">{{ blog.createdAt }}</div>
                 </div>
             </div>
         </div>

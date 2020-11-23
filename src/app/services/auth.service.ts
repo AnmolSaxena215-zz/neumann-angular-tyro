@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import { catchError, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
 interface AuthResponseData {
@@ -8,6 +8,19 @@ interface AuthResponseData {
   name: string,
   email: string,
   token: string,
+}
+
+interface articleResponse {
+  numberOfClicks: number,
+  topics: Array<String>,
+  id: string,
+  numberOfLikes: number,
+  title: string,
+  content: string,
+  createdBy: string,
+  createdAt: string,
+  __v: number
+
 }
 
 @Injectable({
@@ -38,10 +51,26 @@ export class AuthService {
         password: password
       },
       { observe: 'response' }
-    ).pipe(catchError(errorResponse => {
+    ).pipe(tap(resData =>{
+      console.log(resData);
+      localStorage.setItem('token',resData.headers.get("Authorization"));
+    }), 
+    catchError(errorResponse => {
+      if(typeof(errorResponse)==='undefined'){
+        console.log("This is undefined")
+      }
+      console.log(errorResponse);
       return throwError(this.handleError(errorResponse.error["error"]));
     }
     ));
+  }
+
+  isLoggedIn(){
+    return !! localStorage.getItem('token');
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
   }
 
   private handleError(error: string) {
@@ -61,6 +90,10 @@ export class AuthService {
       case "email already exists":
         message="The email entered already exists!";
         break;
+
+        default:
+          message = "Default";
+
     }
 
     return message;

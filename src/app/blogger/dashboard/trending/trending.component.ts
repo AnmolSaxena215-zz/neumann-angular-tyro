@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrendingService } from '../../services/trending.service';
 import { Trending } from './trending.model';
 
 @Component({
@@ -8,16 +9,13 @@ import { Trending } from './trending.model';
 })
 export class TrendingComponent implements OnInit {
 
-  trendingList : Trending[] = [
-    new Trending('01','Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Trending('02','Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
-    new Trending('03','Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
-    new Trending('04','Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() )
-  ] 
+  public trending = []; 
 
-  constructor() { }
+  constructor(private trendingService : TrendingService) { }
 
   ngOnInit(): void {
+    this.trendingService.getTrending()
+    .subscribe(data =>
+      this.trending = data);
   }
-
 }
