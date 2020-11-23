@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Topics } from './topics.model';
+import {TopicService} from '../../services/topic.service';
 
 @Component({
   selector: 'app-topics',
@@ -8,13 +9,13 @@ import { Topics } from './topics.model';
 })
 export class TopicsComponent implements OnInit {
 
-  topicList : Topics[] =[
-    new Topics(1,'Science'),
-    new Topics(2,'Technology')
-  ];
-  constructor() { }
+  public topicToFollow=[];
+  constructor(private topicService: TopicService) { }
 
   ngOnInit(): void {
+    this.topicService.getTopic()
+    .subscribe(data=>
+      this.topicToFollow=data);
   }
 
 }

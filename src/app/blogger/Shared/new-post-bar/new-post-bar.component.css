@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.TitleBar{
+    position: fixed;
+    width: 100%;
+    height: 12.0%;
+    background-color: #1c437e;
+}
+
+
+.home{
+    position: relative;
+    margin-left: 4.5%;
+    padding-top: 1.25%;
+    width: 4.5%;
+    height: 100%;
+    }
+
+.home1{
+    background-color: #1c437e;
+    border: none;
+    outline: none;
+}
+
+.tyro1{
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    width: 5%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #1c437e;
+}
+
+.tyro{
+    margin-left: 9.5%;
+    margin-top: -3.5%;
+}
+
+.line{
+    position: absolute;
+    font-size: 35px;
+    font-stretch: expanded;
+    margin-top: -2%;
+    margin-left: 15%;
+    color: #dbe1e9;
+    cursor: default;
+}
+
+.text{
+    position: absolute;
+    font-size: 25px;
+    margin-top: -2%;
+    margin-left: 17%;
+    color: #f7f8f9;
+    font-family: "Open Sans", sans-serif;
+    cursor:default;
+}
+
+.bell1{
+    background-color: #1c437e;
+    border: none;
+    outline: none;
+}
+
+.bell{
+    position: absolute;
+    margin-left: 74%;
+    margin-top: -2.25%;
+}
+
+.publish{
+    position: absolute;
+    margin-left: 78%;
+    margin-top: -2.35%;
+    width: 110px;
+    height: 30px;
+}
+
+.publish1{
+    background-color: #ff9800;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    font-size: x-small;
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+}
+
+.profile1{
+    background-color: #1c437e;
+    border: none;
+    outline: none;
+}
+
+.profile{
+    position: absolute;
+    margin-top: -2.5%;
+    margin-left: 88%;
+}

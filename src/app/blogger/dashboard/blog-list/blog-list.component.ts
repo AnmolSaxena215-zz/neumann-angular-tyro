@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogListService } from './blog-list.service';
 import { Blog } from './blog.model';
 
 @Component({
@@ -8,22 +9,14 @@ import { Blog } from './blog.model';
 })
 export class BlogListComponent implements OnInit {
 
-  blogList : Blog[] = [
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date() ),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date()),
-    new Blog('Anuhitha', 'Fundamentals of Angular', 'Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.', '../../../assets/images/Profile-ICon.png',new Date())
-  ];
+  public blogList = [];
 
-  constructor() { }
+  constructor(private blogService : BlogListService) { }
 
   ngOnInit(): void {
-    var d = new Date();
-    console.log(d.getDate(), d.getMonth(), d.getFullYear());
+    this.blogService.getBlogs()
+    .subscribe(data =>
+      this.blogList = data)
   }
 
 }

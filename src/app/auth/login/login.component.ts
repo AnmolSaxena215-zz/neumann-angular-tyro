@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TrendingService } from 'src/app/blogger/services/trending.service';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,7 +12,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   error : string = null;
-  constructor(private authService : AuthService, private router : Router) { }
+  constructor(
+    private authService : AuthService,
+    private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -24,9 +27,10 @@ export class LoginComponent implements OnInit {
     const password = form.value.password;
     this.authService.userLogin(email, password)
     .subscribe(resData => {
+      console.log(resData.headers.get("Authorization"));
+      localStorage.setItem('token',resData.headers.get("Authorization"));
       console.log("logged in");
-      console.log(resData);
-      this.router.navigate(['/core']);
+      this.router.navigate(['/dash']);
     },
     errorMessage => {
       console.log("There is an error");
