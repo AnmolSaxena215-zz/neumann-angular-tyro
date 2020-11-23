@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +30,10 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     MatTabsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    BloggerModule
+    BloggerModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatFormFieldModule
   ],
   providers: [
     {

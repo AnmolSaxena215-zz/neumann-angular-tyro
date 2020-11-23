@@ -1,32 +1,28 @@
 <div class="trending">
-        <div class="tredning-on-tyro">
-            <img src="../../../../assets/images/profits.png" alt="trending">
-            <span>TRENDING ON TYRO</span>
-        </div>
-
-        <div class="blogs">
-            <div class="blog-list" *ngFor="let blog of trending">
-                <div class="position">
-                    {{ blog.position }}
-                </div>
-
-                <div class="blog-details">
-                    <div class="author">
-                        <div class="profile">
-                            <img [src]="blog.imagePath" alt="profile" class="pic">
-                        </div>
-                        <div class="name">
-                            <a href="#">
-                                {{ blog.createdBy }}</a>
-                        </div>
+    <div class="tredning-on-tyro">
+        <img src="../../../../assets/images/profits.png" alt="trending">
+        <span>TRENDING ON TYRO</span>
+    </div>
+    <div class="blogs">
+        <div class="blog-list" *ngFor="let blog of trending; let i = index">
+            <div class="position" *ngIf="i < 5">
+                0{{ i+1 }}
+            </div>
+            <div class="blog-details">
+                <div class="author">
+                    <div class="profile">
+                        <img [src]="blog.imagePath" alt="profile" class="pic">
                     </div>
-
-                    <div class="title">
-                        <a href="#">{{ blog.title}}</a>
+                    <div class="name">
+                        <a href="#">
+                            {{ blog.createdBy.name }}</a>
                     </div>
-
-                    <div class="date">{{ blog.createdAt }}</div>
                 </div>
+                <div class="title">
+                    <a href="#">{{ blog.title}}</a>
+                </div>
+                <div class="date">{{ blog.createdAt }}</div>
             </div>
         </div>
+    </div>
 </div>

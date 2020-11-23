@@ -13,7 +13,7 @@ export class TokenInterceptorService implements HttpInterceptor {
     let authService = this.injector.get(AuthService)
     let tokenizedReq = req.clone({
       setHeaders : {
-        Auth : authService.getToken()
+        Auth : `${authService.getToken()}`
       }
       })
     return next.handle(tokenizedReq);

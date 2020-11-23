@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="TitleBar">
     
     <div class="home">
@@ -12,26 +13,23 @@
         |
     </div>
     <div class="text">
-        Good Evening
+        New Post
     </div>
     <div class="bell">
         <button type="button" class="bell1">
             <img alt="Bell" src="/assets/images/bell.png" width="20" height="25">
         </button>
     </div>
-    <div class="wishlist">
-        <button type="button" class="wishlist1">
-            <img alt="Bell" src="/assets/images/wish-list.png" width="20" height="25">
-        </button>
-    </div>
-    <div class="post-button"> 
-        <button name="new-post" class="new-post" type="button" (click)="goToNewPost()">NEW POST</button>
+    <div class="publish">
+        <button type="button" class="publish1" (click)="goToTopic()">PUBLISH</button>
     </div>
     <div class="profile">
         <button type="button" class="profile1" >
             <img alt="Profile" src="/assets/images/Profile.png" width="30" height="30">
         </button>
     </div>
+    
+    
 
 </div>
 
