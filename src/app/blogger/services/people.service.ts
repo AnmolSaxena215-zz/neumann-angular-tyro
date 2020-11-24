@@ -21,7 +21,7 @@ export class PeopleService {
   constructor(private http: HttpClient) {}
 
   getPeople() : Observable<PeopleFollowing[]> {
-    return this.http.get<PeopleFollowing[]>('https://tyro-neumann-project.herokuapp.com/people/',
+    return this.http.get<PeopleFollowing[]>('https://tyro-neumann-project.herokuapp.com/people?count=3',
     )
   }
 }

@@ -38,7 +38,12 @@ export class AuthService {
         password: password,
       },
       { observe: 'response' }
-    ).pipe(catchError(errorResponse => {
+    ).pipe(tap(resData =>{
+      console.log(resData);
+      localStorage.setItem('token',resData.headers.get("Authorization"));
+    }), 
+      
+      catchError(errorResponse => {
       return throwError(this.handleError(errorResponse.error["error"]));
     }
     ));

@@ -4,12 +4,12 @@
     </div>
 
     <div class="people-list">
-        <div class="blog-list" *ngFor="let people of peopleToFollow; let i=index" >
+        <div class="blog-list" *ngFor="let people of peopleToFollow">
             <a href="#">
-                <div class="pics" *ngIf="i < 3">
-                    <img alt="Profile" src="/assets/images/Profile-ICon.png" width="30" height="30">
+                <div class="pics">
+                    <img [src]="people.imagePath" alt="{{ people.name }}" class="pic" style="max-height: 40px;">
                 </div>
-                <div class="name" *ngIf="i < 3">
+                <div class="name">
                     {{ people.name }}
                 </div>
             </a>

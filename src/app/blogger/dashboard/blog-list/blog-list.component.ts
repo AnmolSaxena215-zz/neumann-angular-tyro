@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogListService } from './blog-list.service';
-import { Blog } from './blog.model';
 
 @Component({
   selector: 'app-blog-list',
@@ -10,13 +9,19 @@ import { Blog } from './blog.model';
 export class BlogListComponent implements OnInit {
 
   public blogList = [];
+  public time : number
 
-  constructor(private blogService : BlogListService) { }
+  constructor(private blogService: BlogListService) { }
 
   ngOnInit(): void {
     this.blogService.getBlogs()
-    .subscribe(data =>
-      this.blogList = data)
+      .subscribe(data => {
+        this.blogList = data
+        data.forEach(eachData =>{
+          this.time = eachData.createdAt
+        })
+      }
+      )
   }
 
 }

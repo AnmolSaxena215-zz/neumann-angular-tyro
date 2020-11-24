@@ -10,7 +10,7 @@ interface ArticleResponse {
     title: string,
     content: string,
     createdBy: string,
-    createdAt: string,
+    createdAt: number,
     __v: number
   
   }

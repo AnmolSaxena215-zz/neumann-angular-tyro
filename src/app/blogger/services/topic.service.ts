@@ -18,7 +18,7 @@ export class TopicService {
   constructor(private http: HttpClient) { }
 
   getTopic() : Observable<TopicFollowing[]> {
-    return this.http.get<TopicFollowing[]>('https://tyro-neumann-project.herokuapp.com/topics/',
+    return this.http.get<TopicFollowing[]>('https://tyro-neumann-project.herokuapp.com/topics?count=2',
     )
   }
 

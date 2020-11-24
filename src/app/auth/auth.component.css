@@ -34,8 +34,8 @@
    overflow: hidden;
    position: relative;
    flex-shrink: 0;
-   margin-left: 12vh;
-   margin-right: 12vh;
+   margin-left: 15vh;
+   margin-right: 15vh;
 }
 
 ::ng-deep .mat-tab-body.mat-tab-body-active{
