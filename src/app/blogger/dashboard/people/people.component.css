@@ -2,6 +2,7 @@
 .people-container {
     display: flex;
     flex-direction: column;
+    background-color: #f7f5f9;
 }
 
 .people-list {
@@ -13,12 +14,23 @@
     margin-right: 10%;
 }
 
+.pics{
+    font-size: medium;
+}
+
+.name{
+    font-size: small;
+    padding-top: 2px;
+    text-align: center;
+}
+
 .people {
     margin-bottom: 4%;
+    font-size: small;
+    font-weight: bold;
 }
 
 .name {
-    font-size: xx-small;
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
 }

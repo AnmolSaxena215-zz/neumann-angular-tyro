@@ -1,16 +1,16 @@
 <div class="blog-list" *ngFor="let blog of blogList">
     <div class="author">
         <div class="profile">
-            <img [src]="blog.imagePath" alt="{{ blog.name}}" class="img-responsive" style="max-height: 50px;">
+            <img alt="Profile" src="/assets/images/Profile-ICon.png" width="30" height="30">
         </div>
         <div class="name">
-            <a href="#">
+            <a href="#" class="name1">
             {{ blog.createdBy.name }}</a>
         </div>
     </div>
     <div class="blog">
         <div class="title">
-            <a href="#">{{ blog.title}}</a>
+            <a class="title1" href="#">{{ blog.title}}</a>
         </div>
         <div class="description">{{ blog.content}}</div>
         <div class="date">{{ blog.createdAt }}</div>

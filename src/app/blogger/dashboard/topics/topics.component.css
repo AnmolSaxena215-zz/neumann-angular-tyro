@@ -2,10 +2,13 @@
 .topic-container {
     display: flex;
     flex-direction: column;
+    background-color: #f7f5f9;
 }
 
 .topics{
     margin-top: 5%;
+    font-size: small;
+    font-weight: bold;
 }
 
 .topic-list {
@@ -41,6 +44,7 @@ a{
 .follow> button{
     font-family: "Open Sans", sans-serif;
     border-color: #1c437e;
+    border-width: .5px;
     border-radius: 7px;
     width: 100px;
     background-color: #f7f5f9;
@@ -48,4 +52,9 @@ a{
     margin-bottom: 7%;
     color: #1c437e;
     box-shadow: none;
+}
+
+.name{
+    font-size: small;
+    font-weight: bold;
 }

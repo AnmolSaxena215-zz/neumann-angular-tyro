@@ -7,7 +7,7 @@
         <div class="blog-list" *ngFor="let people of peopleToFollow; let i=index" >
             <a href="#">
                 <div class="pics" *ngIf="i < 3">
-                    <img [src]="people.imagePath" alt="{{ people.name }}" class="pic" style="max-height: 40px;">
+                    <img alt="Profile" src="/assets/images/Profile-ICon.png" width="30" height="30">
                 </div>
                 <div class="name" *ngIf="i < 3">
                     {{ people.name }}
