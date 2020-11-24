@@ -9,7 +9,6 @@ import { BlogListService } from './blog-list.service';
 export class BlogListComponent implements OnInit {
 
   public blogList = [];
-  public time : number
 
   constructor(private blogService: BlogListService) { }
 
@@ -17,9 +16,6 @@ export class BlogListComponent implements OnInit {
     this.blogService.getBlogs()
       .subscribe(data => {
         this.blogList = data
-        data.forEach(eachData =>{
-          this.time = eachData.createdAt
-        })
       }
       )
   }

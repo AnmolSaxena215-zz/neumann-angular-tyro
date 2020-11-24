@@ -13,7 +13,7 @@
             <a class="title1" href="#">{{ blog.title}}</a>
         </div>
         <div class="description">{{ blog.content}}</div>
-        <div class="date" >{{ time }}</div>
+        <div class="date" >{{ blog.createdAt | relativeTime }}</div>
     </div>
     <br/>
 </div>

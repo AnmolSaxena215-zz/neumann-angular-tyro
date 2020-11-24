@@ -8,8 +8,7 @@ import { TrendingService } from '../../services/trending.service';
 })
 export class TrendingComponent implements OnInit {
 
-  public trending = [];
-  public time : number 
+  public trending = []; 
   
   constructor(private trendingService : TrendingService) { }
 
@@ -17,9 +16,6 @@ export class TrendingComponent implements OnInit {
     this.trendingService.getTrending()
     .subscribe(data =>{
       this.trending = data;
-      data.forEach(eachData => {
-        this.time = eachData.createdAt
-      })
     }
     );
   }
