@@ -97,7 +97,7 @@ export class AuthService {
         break;
 
         default:
-          message = "Default";
+          message = "Sorry! Unable to connect to server";
 
     }
 
