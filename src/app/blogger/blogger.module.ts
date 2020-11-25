@@ -16,8 +16,6 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
 import {NewPostBarComponent} from './Shared/new-post-bar/new-post-bar.component';
 import { RelativeTimePipe } from './dashboard/pipes/relative-time.pipe';
 import { SelectTopicsComponent } from './posts/select-topics/select-topics.component';
-import { ReadPostComponent } from './posts/read-post/read-post.component';
-import { TitlebarComponent } from './Shared/titlebar/titlebar.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +29,7 @@ import { TitlebarComponent } from './Shared/titlebar/titlebar.component';
     NewPostBarComponent,
     RelativeTimePipe,
     SelectTopicsComponent,
-    ReadPostComponent,
     NewPostBarComponent,
-    TitlebarComponent
   ],
   imports: [
     CommonModule,
