@@ -57,7 +57,7 @@ export class SelectTopicsComponent implements OnInit {
       const input = event.input;
       const value = event.value;
       // Add our topic
-      if ((value || '').trim() && this.topics.length < 5) {
+      if (((value || '').trim() && this.topics.length < 5)&&(this.alltopics.includes(input.value))) {
         this.topics.push(value.trim());
       }
       // Reset the input value
