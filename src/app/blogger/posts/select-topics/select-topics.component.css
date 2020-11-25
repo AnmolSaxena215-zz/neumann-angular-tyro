@@ -26,8 +26,8 @@ input{
     margin-top: 5%;
     background-color: #DBE1E9;
     height: 8%;
-    width: 50%;
-    margin-left:-4.5%;
+    width: 60%;
+    margin-left:-8.5%;
     /*padding: 12px 534px 22px 32px;*/
     border-radius: 5px;
 }
@@ -80,7 +80,7 @@ mat-chip-list {
 .publish{
     
     width: 15%;
-    height: 20%;
+    height: 7%;
     margin-top: 6%;
     margin-left: 20%;
     
