@@ -3,17 +3,16 @@
     display: flex;
     position: relative;
     width: 100%;
-    height: 14vh;
+    height: 12vh;
     background-color: #1C437E;
 }
 .home{
     display: flex;
     margin-left: 3.75%;
-    padding-top: 1.75%;
+    padding-top: 1.25%;
     width: 3.88%;
     height: 4.68%;
 }
-
 .home1{
     background-color: #1C437E;
     border: none;
@@ -35,12 +34,12 @@
 .tyro{
     display: flex;
     margin-left: .75%;
-    margin-top: 2.75%;
+    margin-top: 2.05%;
 }
 .line{
     display: flex;
     position: relative;
-    margin-top: 2.5%;
+    margin-top: 2.05%;
     font-size: 40px;
     padding-left: 3%;
     color: #DBE1E9;
@@ -50,12 +49,12 @@ p{
     font-weight: 1;
     max-width: 0%;
     font-size: 35px;
-    color: #dbe1e9;
+    color: #DBE1E9;
 }
 .text{
     display: flex;
     position: absolute;
-    margin-top: 2.75%;
+    margin-top: 2.25%;
     font-size: x-large;
     padding-left: 16.5%;
     color: #F7F8F9;
@@ -68,13 +67,11 @@ p{
     border: none;
     width: 1.6%;
     height:38%;
-    margin-top: 2%;
+    margin-top: 1.70%;
     margin-left: 55%;
     align-content: unset;
 }
-
 .bell1{
-
     background-color: #1C437E;
     border: none;
     outline: none;
@@ -87,17 +84,15 @@ p{
     border: none;
     width: 1.4%;
     height:38%;
-    margin-top: 2%;
+    margin-top: 1.70%;
     margin-left: 3%;
 }
-
 .wishlist1{
     background-color: #1C437E;
     border: none;
     outline: none;
 }
 .new-post{
-   
     background-color: #FF9800;
     border: none;
     border-radius: 3px;
@@ -111,7 +106,7 @@ button{
 .post-button{
     display: flex;
     padding-left: 3%;
-    margin-top: 1.8%;
+    margin-top: 1.5%;
 }
 .profile{
     display: flex;

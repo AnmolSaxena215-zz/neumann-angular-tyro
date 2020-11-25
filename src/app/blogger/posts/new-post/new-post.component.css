@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .box{
     position: fixed;
-    margin-top: 6%;
+    margin-top: 0;
     height: 100%;
     width: 100%;
     background-color: #f7f5f9;
