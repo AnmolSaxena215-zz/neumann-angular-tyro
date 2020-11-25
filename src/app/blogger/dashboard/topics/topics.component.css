@@ -7,7 +7,7 @@
 
 .topics{
     margin-top: 5%;
-    font-size: x-small;
+    font-size: smaller;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -16,7 +16,9 @@
     display: flex;
     flex-direction: column;
     margin-top: 3%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-family: 800;
 }
 
 .topics-list{
@@ -27,18 +29,24 @@
     margin-top: 2%;    
     border-bottom: 1px solid rgba(93, 93, 93, 0.3);
     /* border-bottom-right-radius: 10px;  */
-    font-family: "Open Sans", sans-serif;
-    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: .5px;
     
 }
 
 .see-more-text{
-    font-size: xx-small;
+    margin-top: 1%;
+    font-size: x-small;
     font-weight: bolder;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #1c437e;
 }
 
 a{
+    text-decoration: none;
+}
+a:focus{
     text-decoration: none;
 }
 
@@ -57,5 +65,7 @@ a{
 
 .name{
     font-size: smaller;
-    font-weight: 900;
+    font-weight: bolder;
+    color:black;    
+    text-shadow: black;
 }

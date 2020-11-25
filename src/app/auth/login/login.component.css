@@ -99,6 +99,8 @@ button {
     position: absolute;
     width:30px;
     height:35px;
+    left: 1%;
+    margin-left: 72%;
 }
 
 .error{
