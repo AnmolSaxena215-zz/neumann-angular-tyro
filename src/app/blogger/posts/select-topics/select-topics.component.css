@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.page{
+    width: 100%;
+    height: 100%;
+    background-color: #1c437e;
+}
+.text{
+    color: #f7f5f9;
+    text-align: center;
+    padding-top: 17.5%;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    
+}
+input{
+    display: inline-block;
+    outline: none;
+    border: none;
+    
+}
+
+.box1{
+    position: fixed;
+    margin-top: 5%;
+    background-color: #DBE1E9;
+    height: 8%;
+    width: 50%;
+    margin-left:-4.5%;
+    /*padding: 12px 534px 22px 32px;*/
+    border-radius: 5px;
+}
+
+mat-chip-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -4px;
+    width: max-content;
+    
+  }
+  .example-chip-list{
+      width: 0%;
+
+  }
+
+  .mat-chip-color{
+    width: max-content;
+    height: 10px;
+    margin: 0 14px 0 0;
+    padding: 4px 30px 4px 30px;
+    border-radius: 3px;
+    background-color: #007500;
+    /* font-family: "Open Sans", sans-serif; */
+    font-size: 12.5px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #F7F5F9;
+
+  }
+
+  .box{
+      margin-left: 30%;
+  }
+
+  .publish1{
+    background-color: #ff9800;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.publish{
+    
+    width: 15%;
+    height: 20%;
+    margin-top: 6%;
+    margin-left: 20%;
+    
+    
+}
+
+::ng-deep .mat-autocomplete-panel {
+    position: absolute;
+    min-width: fit-content !important;
+    overflow-x: visible;
+    overflow-y: auto;
+    border: 2px;
+    padding-left: 1px;
+    padding-top: 2px;
+    font-family: "Open Sans", sans-serif;
+}
