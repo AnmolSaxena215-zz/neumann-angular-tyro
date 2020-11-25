@@ -11,6 +11,7 @@ interface ArticleResponse {
     content: string,
     createdBy: string,
     createdAt: number,
+    profilePictureUrl : string,
     __v: number
   
   }

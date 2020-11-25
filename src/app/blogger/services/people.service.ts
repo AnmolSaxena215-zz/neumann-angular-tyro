@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import { Url } from 'url';
 
 interface PeopleFollowing{
   followers: Array<String>;
@@ -10,6 +11,7 @@ interface PeopleFollowing{
   name:string;
   email:string;
   password:string;
+  profilePictureUrl : string;
   _v:number;
 }
 

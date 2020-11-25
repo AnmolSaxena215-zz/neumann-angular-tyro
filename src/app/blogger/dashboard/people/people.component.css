@@ -18,6 +18,10 @@
     font-size: medium;
 }
 
+img{
+    border-radius: 50%;
+}
+
 .name{
     font-size: small;
     padding-top: 2px;

@@ -21,6 +21,7 @@ img {
     height: 15px;
     width: 15px;
     margin-bottom: 12%;
+    border-radius: 50%;
 }
 
 .title {

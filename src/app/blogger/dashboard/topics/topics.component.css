@@ -7,8 +7,9 @@
 
 .topics{
     margin-top: 5%;
-    font-size: small;
+    font-size: x-small;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .topic-list {
@@ -55,6 +56,6 @@ a{
 }
 
 .name{
-    font-size: small;
-    font-weight: bold;
+    font-size: smaller;
+    font-weight: 900;
 }
