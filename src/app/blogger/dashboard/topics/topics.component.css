@@ -2,17 +2,23 @@
 .topic-container {
     display: flex;
     flex-direction: column;
+    background-color: #f7f5f9;
 }
 
 .topics{
     margin-top: 5%;
+    font-size: smaller;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .topic-list {
     display: flex;
     flex-direction: column;
     margin-top: 3%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-family: 800;
 }
 
 .topics-list{
@@ -23,24 +29,31 @@
     margin-top: 2%;    
     border-bottom: 1px solid rgba(93, 93, 93, 0.3);
     /* border-bottom-right-radius: 10px;  */
-    font-family: "Open Sans", sans-serif;
-    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: .5px;
     
 }
 
 .see-more-text{
-    font-size: xx-small;
+    margin-top: 1%;
+    font-size: x-small;
     font-weight: bolder;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #1c437e;
 }
 
 a{
+    text-decoration: none;
+}
+a:focus{
     text-decoration: none;
 }
 
 .follow> button{
     font-family: "Open Sans", sans-serif;
     border-color: #1c437e;
+    border-width: .5px;
     border-radius: 7px;
     width: 100px;
     background-color: #f7f5f9;
@@ -48,4 +61,11 @@ a{
     margin-bottom: 7%;
     color: #1c437e;
     box-shadow: none;
+}
+
+.name{
+    font-size: smaller;
+    font-weight: bolder;
+    color:black;    
+    text-shadow: black;
 }

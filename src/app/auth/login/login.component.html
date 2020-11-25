@@ -1,7 +1,7 @@
 <div class="login">
     <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
         <div class="input">
-            <br><input name="email" type="email" placeholder="   EMAIL"
+            <br><input name="email" type="email" placeholder="EMAIL"
             ngModel
             required
             email
@@ -9,7 +9,7 @@
             <span class="invalid" *ngIf="!email.valid && email.touched"
             title="Please enter a valid email id"
             ></span><br><br/>
-            <input type="password" name="password" placeholder="   PASSWORD"
+            <input type="password" name="password" placeholder="PASSWORD"
             ngModel
             required
             minlength="6"

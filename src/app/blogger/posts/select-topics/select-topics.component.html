@@ -1,0 +1,38 @@
+<div class="page">
+    <div class="text">
+        <p>Add upto 5 topics so that readers know what your post is about</p>
+    </div>
+    <div class="box">
+        <mat-form-field class="example-chip-list">
+            <mat-chip-list class="mat-standard-chip" #chipList aria-label="topic selection">
+              <div class="box1">
+              <mat-chip class="mat-chip-color"
+                *ngFor="let topic of topics"
+                [selectable]="selectable"
+                [removable]="removable"
+                (removed)="remove(topic)">
+                {{topic}}
+               
+              </mat-chip>
+              <input
+                (click)="getTopics()"
+                #topicInput
+                [formControl]="topicCtrl"
+                [matAutocomplete]="auto"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                (matChipInputTokenEnd)="add($event)">
+              </div>
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+              <mat-option *ngFor="let topic of filteredtopics | async" [value]="topic">
+                {{topic}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <div class="publish">
+            <button type="button" class="publish1" (click)="goToNewPost()">PUBLISH</button>
+          </div>
+    </div>
+    
+</div>

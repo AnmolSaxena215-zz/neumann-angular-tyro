@@ -11,7 +11,7 @@
             <div class="blog-details">
                 <div class="author">
                     <div class="profile">
-                        <img [src]="blog.imagePath" alt="profile" class="pic">
+                        <img src={{blog.createdBy.profilePictureUrl}} alt="profile" class="pic">
                     </div>
                     <div class="name">
                         <a href="#">
@@ -21,7 +21,7 @@
                 <div class="title">
                     <a href="#">{{ blog.title}}</a>
                 </div>
-                <div class="date">{{ blog.createdAt }}</div>
+                <div class="date">{{ blog.createdAt | date:'MMM d' }}</div>
             </div>
         </div>
     </div>

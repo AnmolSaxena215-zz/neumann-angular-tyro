@@ -2,6 +2,7 @@
 .people-container {
     display: flex;
     flex-direction: column;
+    background-color: #f7f5f9;
 }
 
 .people-list {
@@ -13,14 +14,29 @@
     margin-right: 10%;
 }
 
-.people {
-    margin-bottom: 4%;
+.pics{
+    font-size: medium;
 }
 
-.name {
-    font-size: xx-small;
+img{
+    border-radius: 50%;
+}
+
+.name{
+    font-size: smaller;
+    padding-top: 2px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+
+.people {
+    margin-bottom: 4%;
+    font-size: smaller;
     font-weight: bold;
-    font-family: "Open Sans", sans-serif;
+    letter-spacing: .75px;
+    
 }
 
 button {
@@ -31,15 +47,19 @@ button {
 .plus{
     height: 40px;
     width: 40px;
+    margin-right: 1%;
 }
 
 .see-more-text{
-    font-size: xx-small;
-    font-weight: bold;
-    font-family: "Open Sans", sans-serif;
+    margin-left: 1%;
+    width: fit-content;
+    font-size: smaller;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a{
     text-decoration: none;
     color: black;
+    align-items: center;
 }
