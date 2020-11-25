@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .TitleBar{
+    display: flex;
     position: relative;
     width: 100%;
-    height: 11vh;
+    height: 14vh;
     background-color: #1C437E;
 }
 .home{
-    margin-left: 4.5%;
-    padding-top: 1%;
+    display: flex;
+    margin-left: 3.75%;
+    padding-top: 1.75%;
     width: 3.88%;
     height: 4.68%;
 }
@@ -19,49 +21,55 @@
 }
 .tyro1{
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
+    font-family:Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+    font-size: 30px;
     color: white;
     text-decoration: none;
-    width: fit-content;
+    width: 40px;
     height: fit-content;
     background-color: #1C437E;
     border: none;
     outline: none;
+    font-weight: normal;
 }
 .tyro{
-    margin-left: 9.5%;
-    margin-top: .75%;
+    display: flex;
+    margin-left: .75%;
+    margin-top: 2.75%;
 }
 .line{
-    position: absolute;
-    margin-top: -2%;
-    font-size: 30px;
-    padding-left: 15.5%;
+    display: flex;
+    position: relative;
+    margin-top: 2.5%;
+    font-size: 40px;
+    padding-left: 3%;
     color: #DBE1E9;
+    font-weight: 100;
 }
 p{
     font-weight: 1;
-    max-width: -1%;
+    max-width: 0%;
     font-size: 35px;
     color: #dbe1e9;
 }
 .text{
-    position: relative;
-    margin-top: -2%;
+    display: flex;
+    position: absolute;
+    margin-top: 2.75%;
     font-size: x-large;
-    padding-left: 18.89%;
+    padding-left: 16.5%;
     color: #F7F8F9;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
 }
 .bell{
+    display: flex;
     background-color: #1C437E;
     border: none;
     width: 1.6%;
     height:38%;
-    margin-top: -1.75%;
-    margin-left: 70.54%;
+    margin-top: 2%;
+    margin-left: 55%;
     align-content: unset;
 }
 
@@ -72,14 +80,15 @@ p{
     outline: none;
 }
 .wishlist{
+    display: flex;
     position: relative;
     tab-size: 4;
     background-color: #1C437E;
     border: none;
     width: 1.4%;
     height:38%;
-    margin-top: -2%;
-    margin-left: 75.4%;
+    margin-top: 2%;
+    margin-left: 3%;
 }
 
 .wishlist1{
@@ -88,24 +97,27 @@ p{
     outline: none;
 }
 .new-post{
+   
     background-color: #FF9800;
     border: none;
     border-radius: 3px;
-    width: 18vh;
-    height: 5vh;
+    width: 19vh;
+    height: 6vh;
     font-weight: 500;
 }
 button{
     font-size: 12px;
 }
 .post-button{
-    padding-left: 79.91%;
-    margin-top: -2%;
+    display: flex;
+    padding-left: 3%;
+    margin-top: 1.8%;
 }
 .profile{
+    display: flex;
     position: relative;
-    margin-left: 90%;
-    margin-top: -2.6%;
+    margin-left: 1.5%;
+    margin-top: 0%;
 }
 .profile1{
     outline: none;
