@@ -1,4 +1,5 @@
 <div class="page">
+  <div class="cross"><button type="button" class="cross1" (click)="goToNewPost()">x</button></div>
     <div class="text">
         <p>Add upto 5 topics so that readers know what your post is about</p>
     </div>
@@ -12,7 +13,7 @@
                 [removable]="removable"
                 (removed)="remove(topic)">
                 {{topic}}
-               
+                <mat-icon matChipRemove *ngIf="removable">x</mat-icon>
               </mat-chip>
               <input
                 (click)="getTopics()"
@@ -24,14 +25,14 @@
                 (matChipInputTokenEnd)="add($event)">
               </div>
             </mat-chip-list>
-            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+            <mat-autocomplete class="mat-autocomplete-panel" #auto="matAutocomplete" (optionSelected)="selected($event)">
               <mat-option *ngFor="let topic of filteredtopics | async" [value]="topic">
                 {{topic}}
               </mat-option>
             </mat-autocomplete>
           </mat-form-field>
           <div class="publish">
-            <button type="button" class="publish1" (click)="goToNewPost()">PUBLISH</button>
+            <button type="button" class="publish1" (click)="goToReadPost()">PUBLISH</button>
           </div>
     </div>
     

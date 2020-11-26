@@ -18,8 +18,8 @@ const routes: Routes = [
     { path: 'signup', component: SignupComponent},
   ]
 },
-{path : 'new-post', component : NewPostComponent},
-{path : 'select-topics', component: SelectTopicsComponent},
+{path : 'new-post', component : NewPostComponent, canActivate : [AuthGuard]},
+{path : 'select-topics', component: SelectTopicsComponent, canActivate : [AuthGuard]},
 
 {path : '**', redirectTo : ''}
 ];
