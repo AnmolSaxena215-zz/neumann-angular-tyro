@@ -22,7 +22,7 @@ export class SelectTopicsComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   topicCtrl = new FormControl();
   filteredtopics: Observable<string[]>;
-  topics: string[] = ['Science'];
+  topics: string[] = [];
   alltopics=[] ;
 
   @ViewChild('topicInput') topicInput: ElementRef<HTMLInputElement>;
@@ -49,8 +49,12 @@ export class SelectTopicsComponent implements OnInit {
         })});
       }
 
+  goToReadPost(){
+    this.router.navigate(['/dash']);
+  }
+
   goToNewPost(){
-    this.router.navigate(['/read-post']);
+    this.router.navigate(['/new-post']);
   }
   add(event: MatChipInputEvent): void {
     if (!this.matAutocomplete.isOpen) {

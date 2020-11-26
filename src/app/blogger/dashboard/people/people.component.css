@@ -47,11 +47,10 @@ button {
 .plus{
     height: 40px;
     width: 40px;
-    margin-right: 1%;
+    margin-left: 9%;
 }
 
 .see-more-text{
-    margin-left: 1%;
     width: fit-content;
     font-size: smaller;
     font-weight: 900;
