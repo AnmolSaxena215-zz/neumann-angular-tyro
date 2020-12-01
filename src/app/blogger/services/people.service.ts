@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Url } from 'url';
 
-interface PeopleFollowing{
-  followers: Array<String>;
-  topicsFollowed: Array<String>;
-  articlesCreated: Array<String>;
-  _id:string;
-  name:string;
-  email:string;
-  password:string;
-  profilePictureUrl : string;
-  _v:number;
+interface PeopleFollowing {
+  hasFollowed: boolean;
+  user: {
+    articlesCreated: Array<String>;
+    bookmarks: Array<any>;
+    email: string;
+    followers: Array<any>;
+    name: string;
+    password: string;
+    profilePictureUrl: string;
+    topicsFollowed: Array<String>;
+    _id: string;
+    _v: number;
+  }
 }
 
 @Injectable({
@@ -20,10 +24,25 @@ interface PeopleFollowing{
 })
 export class PeopleService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getPeople() : Observable<PeopleFollowing[]> {
-    return this.http.get<PeopleFollowing[]>('https://tyro-neumann-project.herokuapp.com/people?count=3',
+  getPeople(): Observable<PeopleFollowing[]> {
+    return this.http.get<PeopleFollowing[]>('https://tyro-neumann-project.herokuapp.com/people/unfollowed-users?count=2',
     )
+  }
+
+  getPeopleSidenav(): Observable<PeopleFollowing[]> {
+    return this.http.get<PeopleFollowing[]>('https://tyro-neumann-project.herokuapp.com/people/all-users/',
+    )
+  }
+
+  followPeople(id) {
+    return this.http.post<PeopleFollowing>('https://tyro-neumann-project.herokuapp.com/people/follow/' + id,
+      { observe: 'response' })
+  }
+
+  unfollowPeople(id) {
+    return this.http.post<PeopleFollowing>('https://tyro-neumann-project.herokuapp.com/people/unfollow/' + id,
+    {observe : 'response'})
   }
 }

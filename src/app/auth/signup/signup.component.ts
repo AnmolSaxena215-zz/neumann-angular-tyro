@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
     this.authService.userSignup(name, email, password).
     subscribe(resData => {
       console.log(resData);
-      this.route.navigate(['/dash'])
+      this.route.navigate(['/dashboard'])
     },
     errorMessage => {
       console.log("There is an error");

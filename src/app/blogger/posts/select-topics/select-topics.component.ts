@@ -44,13 +44,13 @@ export class SelectTopicsComponent implements OnInit {
       console.log(data)
       data.forEach(each=>
         {
-          this.alltopics.push(each.topicName)
-          console.log(each.topicName)
+          this.alltopics.push(each.topic.topicName)
+          console.log(each.topic.topicName)
         })});
       }
 
   goToReadPost(){
-    this.router.navigate(['/dash']);
+    this.router.navigate(['/dashboard']);
   }
 
   goToNewPost(){

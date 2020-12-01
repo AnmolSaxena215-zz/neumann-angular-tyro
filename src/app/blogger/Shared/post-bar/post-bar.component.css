@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.TitleBar{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    background-color: #1C437E;
+}
+.home{
+    display: flex;
+    margin-left: 3.75%;
+    padding-top: 1.25%;
+    width: 3.88%;
+    height: 4.68%;
+}
+.home1{
+    background-color: #1C437E;
+    border: none;
+    outline: none;
+}
+.tyro1{
+    position: relative;
+    font-family:Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: fit-content;
+    background-color: #1C437E;
+    border: none;
+    outline: none;
+    font-weight: normal;
+}
+.tyro{
+    display: flex;
+    margin-left: .75%;
+    margin-top: 2.05%;
+}
+.line{
+    display: flex;
+    position: relative;
+    margin-top: 2.05%;
+    font-size: 40px;
+    padding-left: 3%;
+    color: #DBE1E9;
+    font-weight: 100;
+}
+p{
+    font-weight: 1;
+    max-width: 0%;
+    font-size: 35px;
+    color: #DBE1E9;
+}
+.text{
+    display: flex;
+    position: absolute;
+    margin-top: 2.25%;
+    font-size: x-large;
+    padding-left: 16.5%;
+    color: #F7F8F9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+}
+.bell{
+    display: flex;
+    background-color: #1C437E;
+    border: none;
+    width: 1.6%;
+    height:38%;
+    margin-top: 1.70%;
+    margin-left: 59%;
+    align-content: unset;
+}
+.bell1{
+    background-color: #1C437E;
+    border: none;
+    outline: none;
+}
+
+.publish1{
+    background-color: #FF9800;
+    border: none;
+    border-radius: 3px;
+    width: 19vh;
+    height: 6vh;
+    font-weight: 600;
+}
+button{
+    font-size: 12px;
+}
+.publish{
+    display: flex;
+    padding-left: 3%;
+    margin-top: 1.5%;
+}
+.profile{
+    display: flex;
+    position: relative;
+    margin-left: 1.5%;
+    margin-top: 0%;
+}
+.profile1{
+    outline: none;
+    border: none;
+    background-color: #1C437E;
+}
+
+.profile2{
+    border-radius: 50%;
+}

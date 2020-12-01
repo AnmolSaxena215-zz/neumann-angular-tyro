@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PostService } from '../../services/post.service';
 import { BlogListService } from './blog-list.service';
 
 @Component({
@@ -9,8 +11,12 @@ import { BlogListService } from './blog-list.service';
 export class BlogListComponent implements OnInit {
 
   public blogList = [];
+  public blog;
 
-  constructor(private blogService: BlogListService) { }
+  constructor(
+    private blogService: BlogListService,
+    private route : Router,
+    ) { }
 
   ngOnInit(): void {
     this.blogService.getBlogs()
@@ -18,6 +24,14 @@ export class BlogListComponent implements OnInit {
         this.blogList = data
       }
       )
+  }
+
+  goTo(id){
+   this.route.navigate(['read-post/'+id])
+  }
+
+  getData(){
+    return this.blog;
   }
 
 }

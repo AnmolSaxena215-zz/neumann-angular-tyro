@@ -1,23 +1,79 @@
-<div class="main-container">
-    <div class="header">
-        <app-header></app-header>
-    </div>
-
-    <div class="trending">
-        <app-trending style="width: 100%"></app-trending>
-    </div>
-
-    <div class="post-follows">
-        <div class="posts">
-            <app-blog-list></app-blog-list>
+<mat-sidenav-container>
+    <mat-sidenav class="sidenav1" #sidenav mode="over" [(opened)]="opened1" position="end">
+        <div class="topics-to-follow-text">
+            TOPICS TO FOLLOW
         </div>
-        <div class="follow">
-            <div class="people">
-                <app-people></app-people>
+        <div class="topics-to-follow-topic-list">
+            <div class="topics-to-follow-topics-list" *ngFor="let topic of topicToFollow">
+                <div class="name">
+                    {{ topic.topic.topicName }}
+                </div>
+                <div class="topics-to-follow">
+                    <button class="follow-button" style="background-color: #1c437e;color: white; border: none;" class="following" *ngIf="topic.hasFollowed===true" (click)="onClickTopics(topic.topic._id, topic.hasFollowed)">
+                        {{topic.hasFollowed? 'Following' : 'Follow'}}
+                    </button>
+                    <button class="toFollow" *ngIf="topic.hasFollowed===false" (click)="onClickTopics(topic.topic._id,topic.hasFollowed)">
+                        {{topic.hasFollowed? 'Following' : 'Follow'}}
+                    </button>
+                </div>
             </div>
-            <div class="topics">
-                <app-topics></app-topics>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav class="sidenav2" #sidenav1 mode="over" [(opened)]="opened2" position="end">
+        <div class="people-to-follow-text">
+            PEOPLE TO FOLLOW
+        </div>
+        <div class="people-to-follow"> 
+            <div class="people-to-follow-list" *ngFor="let people of peopleToFollow">
+                <div>
+                    <img class="pic" src={{people.user.profilePictureUrl}} alt="profile">
+                </div>
+                <div class="name-follow">
+                    <div class="name">
+                        {{people.user.name}}
+                    </div>
+                    <div class="people-follow-button">
+                        <button class="follow-button" style="background-color: #1c437e;color: white; border: none;" class="following" *ngIf="people.hasFollowed===true" (click)="onClickPeople(people.user._id, people.hasFollowed)">
+                            {{people.hasFollowed? 'Following' : 'Follow'}}
+                        </button>
+                        <button class="toFollow" *ngIf="people.hasFollowed===false" (click)="onClickPeople(people.user._id,people.hasFollowed)">
+                            {{people.hasFollowed? 'Following' : 'Follow'}}
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>   
-    </div>
-</div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="main-container">
+            <div class="header">
+                <app-header></app-header>
+            </div>
+
+            <div class="trending">
+                <app-trending style="width: 100%"></app-trending>
+            </div>
+
+            <div class="post-follows">
+                <div class="posts">
+                    <app-blog-list></app-blog-list>
+                </div>
+                <div class="follow">
+                    <div class="people">
+                        <app-people></app-people>
+                    </div>
+                    <div class="topics">
+                        <app-topics></app-topics>
+                        <button (click)="sidenav.toggle()" class="see-more-topics">
+                            See More
+                        </button>
+                    </div>
+                    
+                    <button (click)="sidenav1.toggle()" class="see-more-people">
+                        See More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

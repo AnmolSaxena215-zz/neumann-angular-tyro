@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { People } from './people.model';
-import {PeopleService} from '../../services/people.service';
+import { PeopleService } from '../../services/people.service';
 
 @Component({
   selector: 'app-people',
@@ -9,16 +9,18 @@ import {PeopleService} from '../../services/people.service';
 })
 export class PeopleComponent implements OnInit {
 
-  public peopleToFollow=[];
-  
+  public peopleToFollow = [];
+
 
   constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
 
     this.peopleService.getPeople()
-    .subscribe(data=>
-      this.peopleToFollow =data);
+      .subscribe(data => {
+        this.peopleToFollow = data
+      }
+      );
   }
 
 }

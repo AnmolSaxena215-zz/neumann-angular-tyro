@@ -1,19 +1,21 @@
 <div class="blog-list" *ngFor="let blog of blogList">
     <div class="author">
         <div class="profile">
-            <img alt="Profile" src={{blog.createdBy.profilePictureUrl}} width="30" height="30">
+            <img alt="Profile" src={{blog.article.createdBy.profilePictureUrl}} width="30" height="30">
         </div>
         <div class="name">
             <a href="#" class="name1">
-            {{ blog.createdBy.name }}</a>
+            {{ blog.article.createdBy.name}}</a>
         </div>
     </div>
     <div class="blog">
         <div class="title">
-            <a class="title1" href="#">{{ blog.title}}</a>
+            <a class="title1" (click)="goTo(blog.article._id)">
+                {{ blog.article.title}}
+            </a>
         </div>
-        <div class="description">{{ blog.content}}</div>
-        <div class="date" >{{ blog.createdAt | relativeTime }}</div>
+        <div class="description">{{ blog.article.content}}</div>
+        <div class="date" >{{ blog.article.createdAt | relativeTime }}</div>
     </div>
     <br/>
 </div>

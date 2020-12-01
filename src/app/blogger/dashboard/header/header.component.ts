@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/new-post']);
   }
   goToDashboard(){
-    this.router.navigate(['/dash']);
+    this.router.navigate(['/dashboard']);
   }
 
 }

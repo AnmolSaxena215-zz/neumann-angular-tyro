@@ -6,19 +6,16 @@
     <div class="topic-list">
         <div class="topics-list" *ngFor="let topic of topicToFollow">
             <div class="name">
-                {{ topic.topicName }}
+                {{ topic.topic.topicName }}
             </div>
             <div class="follow">
-                <button>Follow</button>
+                <button style="background-color: #1c437e;color: white; border: none;" class="following" *ngIf="topic.hasFollowed===true" (click)="onClick(topic.topic._id, topic.hasFollowed)">
+                    {{topic.hasFollowed? 'Following' : 'Follow'}}
+                </button>
+                <button class="toFollow" *ngIf="topic.hasFollowed===false" (click)="onClick(topic.topic._id,topic.hasFollowed)">
+                    {{topic.hasFollowed? 'Following' : 'Follow'}}
+                </button>
             </div>
         </div>
-        <a href="#">
-            <div class="see-more">
-            </div>
-            <div class="see-more-text">
-                See More
-            </div>
-        </a>
-        
     </div>
 </div>

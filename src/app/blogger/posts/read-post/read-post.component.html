@@ -1,0 +1,33 @@
+<app-post-bar></app-post-bar>
+<div class="text-container">
+    <div class="title">
+        {{blog.article.title}}
+    </div>
+
+    <div class="author">
+        <div class="author-details">
+            <div class="profilePic">
+                <img alt="Profile" src={{blog.article.createdBy.profilePictureUrl}} width="15" height="15"
+                    style="border-radius: 50%;">
+            </div>
+            <div class="name">
+                {{blog.article.createdBy.name}}
+            </div>
+            <div class="time">
+                {{ blog.article.createdAt | relativeTime }}
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="likes">
+                likes
+            </div>
+            <div class="bookmark">
+                bookmark
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        {{blog.article.content}}
+    </div>
+</div>

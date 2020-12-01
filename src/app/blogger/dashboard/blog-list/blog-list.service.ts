@@ -3,28 +3,31 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 interface ArticleResponse {
-    numberOfClicks: number,
-    topics: Array<String>,
-    id: string,
-    numberOfLikes: number,
-    title: string,
+  article: {
+    bookmarkedBy : Array<String>;
     content: string,
-    createdBy: string,
     createdAt: number,
-    profilePictureUrl : string
-    __v: number
-  
+    createdBy: string,
+    likedBy : Array<String>,
+    numberOfClicks: number,
+    title: string,
+    topics : {
+      topicName : string,
+      _id : string
+    },
+    _id : string
   }
+}
 @Injectable({
-    providedIn: 'root'
-  })
+  providedIn: 'root'
+})
 
-export class BlogListService{
+export class BlogListService {
 
-    constructor(private http : HttpClient){}
+  constructor(private http: HttpClient) { }
 
-    getBlogs() : Observable<ArticleResponse[]> {
-        return this.http.get<ArticleResponse[]>('https://tyro-neumann-project.herokuapp.com/article/feed',
-        )
-      }
+  getBlogs(): Observable<ArticleResponse[]> {
+    return this.http.get<ArticleResponse[]>('https://tyro-neumann-project.herokuapp.com/article/feed',
+    )
+  }
 }

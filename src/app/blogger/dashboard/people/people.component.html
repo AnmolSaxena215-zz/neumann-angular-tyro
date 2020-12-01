@@ -7,10 +7,10 @@
         <div class="blog-list" *ngFor="let people of peopleToFollow">
             <a href="#">
                 <div class="pics">
-                    <img src={{people.profilePictureUrl}} alt="{{ people.name }}" class="pic" style="max-height: 40px;">
+                    <img src={{people.user.profilePictureUrl}} alt="{{ people.user.name }}" class="pic" style="max-height: 40px;">
                 </div>
                 <div class="name">
-                    {{ people.name }}
+                    {{ people.user.name }}
                 </div>
             </a>
         </div>

@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       console.log(resData.headers.get("Authorization"));
       localStorage.setItem('token',resData.headers.get("Authorization"));
       console.log("logged in");
-      this.router.navigate(['/dash']);
+      this.router.navigate(['/dashboard']);
     },
     errorMessage => {
       console.log("There is an error");

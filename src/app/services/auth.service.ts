@@ -10,19 +10,6 @@ interface AuthResponseData {
   token: string,
 }
 
-interface articleResponse {
-  numberOfClicks: number,
-  topics: Array<String>,
-  id: string,
-  numberOfLikes: number,
-  title: string,
-  content: string,
-  createdBy: string,
-  createdAt: string,
-  __v: number
-
-}
-
 @Injectable({
   providedIn: 'root'
 })

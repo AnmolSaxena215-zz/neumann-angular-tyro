@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BlogListComponent } from './dashboard/blog-list/blog-list.component';
@@ -16,6 +17,8 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
 import {NewPostBarComponent} from './Shared/new-post-bar/new-post-bar.component';
 import { RelativeTimePipe } from './dashboard/pipes/relative-time.pipe';
 import { SelectTopicsComponent } from './posts/select-topics/select-topics.component';
+import { ReadPostComponent } from './posts/read-post/read-post.component';
+import { PostBarComponent } from './Shared/post-bar/post-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { SelectTopicsComponent } from './posts/select-topics/select-topics.compo
     RelativeTimePipe,
     SelectTopicsComponent,
     NewPostBarComponent,
+    ReadPostComponent,
+    PostBarComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +44,7 @@ import { SelectTopicsComponent } from './posts/select-topics/select-topics.compo
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSidenavModule
   ],
   exports : [
     DashboardComponent,
