@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PostService } from '../../services/post.service';
-import { BlogListService } from './blog-list.service';
+import { BlogListService } from '../../services/blog-list.service';
 
 @Component({
   selector: 'app-blog-list',

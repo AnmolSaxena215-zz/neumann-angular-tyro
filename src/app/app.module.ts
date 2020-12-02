@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
-import {MatTabsModule} from '@angular/material/tabs';
-import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatFormFieldModule} from '@angular/material/form-field'
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { FormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignupComponent } from './auth/signup/signup.component';;
 import { BloggerModule } from './blogger/blogger.module';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
@@ -37,9 +37,9 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
   ],
   providers: [
     {
-      provide : HTTP_INTERCEPTORS,
-      useClass : TokenInterceptorService,
-      multi : true
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]
