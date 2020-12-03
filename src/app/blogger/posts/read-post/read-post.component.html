@@ -19,10 +19,15 @@
         </div>
         <div class="buttons">
             <div class="likes">
-                likes
+                <img src="../../../../assets/images/red-heart.png" (click)="liked(blog.article._id, blog.hasLiked)" *ngIf="blog.hasLiked===true">
+                <img src="../../../../assets/images/heart.png" (click)="liked(blog.article._id, blog.hasLiked)" *ngIf="blog.hasLiked===false">
+            </div>
+            <div class="number-of-likes">
+                {{blog.article.numberOfLikes}}
             </div>
             <div class="bookmark">
-                bookmark
+                <img src="../../../../assets/images/bookmark.png" (click)="bookmarked(blog.article._id,blog.isBookmarked)" *ngIf="blog.isBookmarked===false">
+                <img src="../../../../assets/images/bookmarked.png" (click)="bookmarked(blog.article._id,blog.isBookmarked)" *ngIf="blog.isBookmarked===true">
             </div>
         </div>
     </div>

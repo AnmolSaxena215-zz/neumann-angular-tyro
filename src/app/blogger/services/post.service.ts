@@ -37,5 +37,33 @@ export class PostService {
   getPost(id) {
     return this.http.get<PostResponse>('https://tyro-neumann-project.herokuapp.com/article/read/' + id)
   }
+
+  likePost(id) {
+    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/like/' + id,
+    {observe : 'response'}
+    )
+  }
+
+  unlikePost(id){
+    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/unlike/' + id,
+    {observe : 'response'}
+    )
+  }
+
+  bookmarkPost(id){
+    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/bookmark/' + id,
+    {observe : 'response'}
+    )
+  }
+
+  unbookmarPost(id){
+    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/unbookmark/' + id,
+    {observe : 'response'})
+  }
+
+  publishPost(){
+    return this.http.post('https://tyro-neumann-project.herokuapp.com//article/publish',
+    {observe : 'response'})
+  }
   
 }

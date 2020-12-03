@@ -19,6 +19,7 @@ import { SelectTopicsComponent } from './posts/select-topics/select-topics.compo
 import { ReadPostComponent } from './posts/read-post/read-post.component';
 import { PostBarComponent } from './Shared/post-bar/post-bar.component';
 import { RelativeTimePipe } from './pipes/relative-time.pipe';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RelativeTimePipe } from './pipes/relative-time.pipe';
     NewPostBarComponent,
     ReadPostComponent,
     PostBarComponent,
+    BookmarksComponent,
   ],
   imports: [
     CommonModule,

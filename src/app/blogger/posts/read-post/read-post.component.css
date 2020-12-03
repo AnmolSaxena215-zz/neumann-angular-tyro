@@ -27,13 +27,23 @@
     flex-direction: row;
 }
 
+.content{
+    color: #333333;
+}
+
 .buttons{
     display: flex;
     flex-direction: row;
 }
 
+.number-of-likes{
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    margin-left: 10%;
+}
+
 .name{
-    font-size: 8px;
+    font-size: 10px;
     font-family: 'Open Sans',sans-serif;
     font-weight: 800;
     margin-left: 5%;
@@ -41,9 +51,13 @@
 }
 
 .time{
-    font-size: 8px;
+    font-size: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     margin-left: 5%;
     min-width: fit-content
+}
+
+.bookmark{
+    margin-left: 10%;
 }

@@ -11,7 +11,7 @@
 }
 
 .blog-list {
-    margin-right: 10%;
+    margin-right: 20%;
 }
 
 .pics{
@@ -44,7 +44,7 @@ button {
     width: 50px;
 }
 
-.plus{
+/* .plus{
     height: 40px;
     width: 40px;
     margin-left: 9%;
@@ -55,7 +55,7 @@ button {
     font-size: smaller;
     font-weight: 900;
     font-family: 'Open Sans', sans-serif;
-}
+} */
 
 a{
     text-decoration: none;
