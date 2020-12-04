@@ -6,6 +6,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BlogListComponent } from './dashboard/blog-list/blog-list.component';
@@ -46,7 +47,8 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule
   ],
   exports: [
     DashboardComponent,

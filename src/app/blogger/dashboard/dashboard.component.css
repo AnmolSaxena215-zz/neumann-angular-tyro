@@ -1,45 +1,42 @@
-.main-container{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.main-container {
     overflow-y: scroll;
     height: 100vh;
     background-color: #f7f5f9;
 }
 
-.trending{
+.trending {
     width: 100%;
     display: flex;
     flex-direction: row;
     /* margin-top: 10vh; */
     margin-bottom: 7vh;
-    height: 40vh;
+    height: 36vh;
     /* padding: 5%; */
     border-bottom: 1px solid rgba(93, 93, 93, 0.3);
-    
 }
 
-.trending.app-trending{
+.trending.app-trending {
     width: 100%;
 }
 
-.post-follows{
-
+.post-follows {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
     height: 90vh;
-    
 }
 
-.posts{
+.posts {
     flex-basis: 55%;
     overflow-y: scroll;
     height: 90vh;
     padding-left: 5%;
     padding-right: 5%;
-    
 }
 
-.follow{
+.follow {
     flex-basis: 45%;
     padding-left: 5%;
     flex-direction: column;
@@ -51,26 +48,165 @@
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     /* -webkit-border-radius: 10px; */
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.911);
-
-
-    box-shadow: inset 0 0 6px rgba(168, 166, 166, 0.5); 
+    box-shadow: inset 0 0 6px rgba(168, 166, 166, 0.5);
 }
 
-.people{
+.people {
+    /* display: flex; */
+    flex-basis: 50%;
+    flex-direction: row;
+    max-width: 35vh;
+}
+
+.topics {
     flex-basis: 50%;
 }
 
-.topics{
-    flex-basis: 50%;
+/* Sidenav for topics to follow */
+
+.see-more-topics {
+    margin-top: 1%;
+    font-size: x-small;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    color: #1c437e;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+mat-sidenav-container {
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.sidenav1 {
+    background-color: #f7f5f9;
+    width: 350px;
+}
+
+.sidenav2 {
+    background-color: #f7f5f9;
+    width: 265px;
+}
+
+mat-sidenav-content {
+    background-color: transparent;
+}
+
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+    opacity: 0;
+}
+
+.topics-to-follow-topics-list {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgba(93, 93, 93, 0.3);
+    padding-top: 3%;
+    margin-right: 5%;
+}
+
+.topics-to-follow-topic-list {
+    padding-left: 3%;
+    padding-top: 5%;
+}
+
+.topics-to-follow-text {
+    padding-top: 1%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: large;
+    font-weight: bolder;
+    letter-spacing: .5px;
+}
+
+button {
+    font-family: "Open Sans", sans-serif;
+    border-color: #1c437e;
+    border-width: .5px;
+    border-radius: 7px;
+    width: 85px;
+    background-color: #f7f5f9;
+    outline: none;
+    margin-bottom: 7%;
+    color: #1c437e;
+    box-shadow: none;
+}
+
+.people-to-follow-text {
+    padding-top: 1%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pic {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.people-to-follow {
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.people-to-follow-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.name{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+.name-follow{
+    margin-left: 5%;
+}
+
+.plus{
+    height: 40px;
+    width: 40px;
+    margin-left: 9%;
+}
+
+.see-more-text{
+    width: fit-content;
+    font-size: smaller;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    align-items: center;
 }

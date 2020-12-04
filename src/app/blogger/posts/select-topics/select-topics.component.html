@@ -10,11 +10,10 @@
           <mat-chip class="mat-chip-color" *ngFor="let topic of topics" [selectable]="selectable"
             [removable]="removable" (removed)="remove(topic)">
             {{topic}}
-            <!-- <mat-icon matChipRemove *ngIf="removable">x</mat-icon> -->
+            <mat-icon matChipRemove *ngIf="removable"><span>x</span></mat-icon>
           </mat-chip>
-          <input (click)="getTopics()" #topicInput [formControl]="topicCtrl" [matAutocomplete]="auto"
-            [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            (matChipInputTokenEnd)="add($event)">
+          <input #topicInput [formControl]="topicCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">
         </div>
       </mat-chip-list>
       <mat-autocomplete class="mat-autocomplete-panel" #auto="matAutocomplete" (optionSelected)="selected($event)">
@@ -24,7 +23,7 @@
       </mat-autocomplete>
     </mat-form-field>
     <div class="publish">
-      <button type="button" class="publish1" (click)="goToReadPost()">PUBLISH</button>
+      <button type="button" class="publish1" (click)="publishPost()">PUBLISH</button>
     </div>
   </div>
 </div>

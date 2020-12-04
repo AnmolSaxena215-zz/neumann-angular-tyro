@@ -45,6 +45,4 @@ export class TopicService {
     return this.http.post('https://tyro-neumann-project.herokuapp.com/topics/unfollow/' + id,
     {observe : 'respose'})
   }
-
-
 }

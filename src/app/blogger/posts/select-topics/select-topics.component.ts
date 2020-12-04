@@ -9,6 +9,7 @@ import { map, startWith } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { TopicService } from '../../services/topic.service';
 import { PostService } from '../../services/post.service';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-select-topics',
@@ -17,6 +18,11 @@ import { PostService } from '../../services/post.service';
 
 })
 export class SelectTopicsComponent implements OnInit {
+
+  allTopicsReceived: any
+  chosenTopicIds: Array<string> = []
+  blogTitle: string
+  blogDesc : string
   visible = true;
   selectable = true;
   removable = true;
@@ -31,38 +37,58 @@ export class SelectTopicsComponent implements OnInit {
   isEnabled: boolean;
 
   constructor(
-    private router: Router,
+    private route: Router,
     private topicService: TopicService,
-    private postService: PostService
+    private postService: PostService,
+    private location : Location
   ) {
     this.filteredtopics = this.topicCtrl.valueChanges.pipe(
       startWith(null),
       map((topic: string | null) => topic ? this._filter(topic) : this.alltopics.slice()));
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  getTopics() {
+    // throw new Error('Method not implemented.');
+    this.blogTitle = localStorage.getItem('blog-title')
+    this.blogDesc = localStorage.getItem('blog-description')
+    console.log(this.blogTitle+this.blogDesc)
     this.topicService.getTopicSuggestion()
       .subscribe(data => {
         console.log(data)
+        this.allTopicsReceived = data
         data.forEach(each => {
           this.alltopics.push(each.topic.topicName)
           console.log(each.topic.topicName)
         })
+        console.log(this.allTopicsReceived)
       });
   }
 
-  goToReadPost() {
-    this.postService.publishPost()
-    .subscribe(data =>{
-      console.log(data)
-    })
+  // getTopics() {
+  //   this.topicService.getTopicSuggestion()
+  //     .subscribe(data => {
+  //       console.log(data)
+  //       data.forEach(each => {
+  //         this.alltopics.push(each.topic.topicName)
+  //         console.log(each.topic.topicName)
+  //       })
+  //     });
+  // }
+
+  publishPost() {
+    this.getTopicId(this.topics)
+    console.log("afterPublis"+this.blogTitle+this.blogDesc)
+    console.log(this.chosenTopicIds)
+    this.postService.publishPost(this.blogTitle, this.blogDesc, this.chosenTopicIds)
+      .subscribe(data => {
+        console.log(data)
+      })
+    localStorage.removeItem('blog-title')
+    localStorage.removeItem('blog-description')
+    this.route.navigate(['/dashboard'])
   }
 
   goToNewPost() {
-    this.router.navigate(['/new-post']);
+    this.route.navigate(['/new-post'])
   }
   add(event: MatChipInputEvent): void {
     if (!this.matAutocomplete.isOpen) {
@@ -102,6 +128,15 @@ export class SelectTopicsComponent implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this.alltopics.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+  }
+
+  getTopicId(selectedTopics: string[]) {
+    selectedTopics.forEach(element => {
+      var index = this.allTopicsReceived.findIndex(x => x.topic.topicName === element);
+      console.log("Inside getTopicID" + this.allTopicsReceived[index])
+      console.log(index)
+      this.chosenTopicIds.push(this.allTopicsReceived[index].topic._id);
+    });
   }
 }
 

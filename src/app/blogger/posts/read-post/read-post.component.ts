@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BlogListComponent } from '../../dashboard/blog-list/blog-list.component';
+import { BookmarksService } from '../../services/bookmarks.service';
 import { PostService } from '../../services/post.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class ReadPostComponent implements OnInit {
   constructor(
     private activeRoute: ActivatedRoute,
     private postService: PostService,
+    private bookmarkService : BookmarksService,
   ) { }
 
   ngOnInit(): void {
@@ -44,14 +45,14 @@ export class ReadPostComponent implements OnInit {
 
   bookmarked(id, isBookmarked) {
     if (isBookmarked === false) {
-      this.postService.bookmarkPost(id)
+      this.bookmarkService.bookmarkPost(id)
         .subscribe(data => {
           console.log(data)
           this.ngOnInit();
         })
     }
     else{
-      this.postService.unbookmarPost(id)
+      this.bookmarkService.unbookmarPost(id)
       .subscribe(data=>{
         console.log(data)
         this.ngOnInit();

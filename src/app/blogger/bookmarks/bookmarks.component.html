@@ -1,33 +1,35 @@
-<app-new-post-bar></app-new-post-bar>
+<app-header></app-header>
 <div class="bookmarks-container">
     <div class="bookmarks-text">
-        BOOKMARKS ()
+        BOOKMARKS ({{bookmarks.length}})
     </div>
 
     <div class="bookmarks-list">
-        <div class="author-details">
-            <div class="pic">
-
+        <div class="list-of-blogs" *ngFor="let bookmark of bookmarks">
+            <div class="author-details">
+                <div class="picture">
+                    <img class="pic" src={{bookmark.article.createdBy.profilePictureUrl}}>
+                </div>
+                <div class="name">
+                    {{bookmark.article.createdBy.name}}
+                </div>
             </div>
-            <div class="name">
 
+            <div class="title">
+                {{bookmark.article.title}}
             </div>
-        </div>
-        
-        <div class="title">
 
-        </div>
-
-        <div class="content">
-
-        </div>
-
-        <div class="time-delete">
-            <div class="time">
-
+            <div class="content">
+                {{bookmark.article.content}}
             </div>
-            <div class="delete-button">
-                
+
+            <div class="time-delete">
+                <div class="time">
+                    {{bookmark.article.createdAt | relativeTime}}
+                </div>
+                <div class="delete-button">
+                    <img class="delete" src="../.../../../../assets/images/delete.png" (click)="deleteFromBookmarks(bookmark.article._id)">
+                </div>
             </div>
         </div>
     </div>

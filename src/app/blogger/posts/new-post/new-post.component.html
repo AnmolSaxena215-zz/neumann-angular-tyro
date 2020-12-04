@@ -1,12 +1,47 @@
-<app-new-post-bar></app-new-post-bar>
-<form>
-    <div class="box">
-        <div class="title">
-         <input type="text" name="Title" placeholder="Title" class="inside" required>
+<div>
+    <div class="TitleBar">
+        <div class="home">
+            <button type="button" class="home1">
+                <img alt="Logo" src="/assets/images/group.png" width="45" height="40" class="logo">
+            </button>
         </div>
-        <div class="post">
-            <textarea class="description" name="Description" placeholder="Type Something" required></textarea>
+        <div class="tyro">
+            <button type="button" name="Tyro" class="tyro1" aria-setsize="div">tyro</button>
         </div>
-        
-    </div>  
-</form>
+        <div class="line">
+            |
+        </div>
+        <div class="text">
+            New Post
+        </div>
+        <div class="bell">
+            <button type="button" class="bell1">
+                <img alt="Bell" src="/assets/images/bell.png" width="25" height="30">
+            </button>
+        </div>
+        <div class="publish">
+            <button [disabled]="!blogForm.valid"type="button" class="publish1" (click)="save()">PUBLISH</button>
+        </div>
+        <div class="profile">
+            <button type="button" class="profile1">
+                <img class="profile2" alt="Profile" src="/assets/images/girldp3-cropped.jpg" width="38" height="38">
+            </button>
+        </div>
+    </div>
+    <div>
+        <form [formGroup]="blogForm">
+            <div class="box">
+                <div class="title">
+                    <input type="text" formControlName="title" placeholder="Title" class="inside">
+                    <span *ngIf="" class="invalid"
+                        title="The title should be of minimum 10 characters"></span>
+                </div>
+                <div class="post">
+                    <textarea class="description" formControlName="description" placeholder="Type Something"></textarea>
+                    <span *ngIf="!blogForm.valid && blogForm.touched" class="invalid"
+                        title="The description should be of minimum 100 characters"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

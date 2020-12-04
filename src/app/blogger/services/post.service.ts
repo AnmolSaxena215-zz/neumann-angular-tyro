@@ -50,19 +50,14 @@ export class PostService {
     )
   }
 
-  bookmarkPost(id){
-    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/bookmark/' + id,
-    {observe : 'response'}
-    )
-  }
-
-  unbookmarPost(id){
-    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/unbookmark/' + id,
-    {observe : 'response'})
-  }
-
-  publishPost(){
-    return this.http.post('https://tyro-neumann-project.herokuapp.com//article/publish',
+  publishPost(title : string, content : string, topics : Array<string>){
+    console.log("Inside publish service" + title + content + topics)
+    return this.http.post('https://tyro-neumann-project.herokuapp.com/article/publish',
+    {
+      title : title, 
+      content : content, 
+      topics : topics
+    },
     {observe : 'response'})
   }
   
