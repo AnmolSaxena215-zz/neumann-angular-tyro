@@ -9,7 +9,6 @@ import { map, startWith, timeout } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { TopicService } from '../../services/topic.service';
 import { PostService } from '../../services/post.service';
-import { Location } from '@angular/common'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -23,7 +22,7 @@ export class SelectTopicsComponent implements OnInit {
   allTopicsReceived: any
   chosenTopicIds: Array<string> = []
   blogTitle: string
-  blogDesc : string
+  blogDesc: string
   visible = true;
   selectable = true;
   removable = true;
@@ -41,7 +40,7 @@ export class SelectTopicsComponent implements OnInit {
     private route: Router,
     private topicService: TopicService,
     private postService: PostService,
-    private toastr : ToastrService
+    private toastr: ToastrService
   ) {
     this.filteredtopics = this.topicCtrl.valueChanges.pipe(
       startWith(null),
@@ -51,7 +50,7 @@ export class SelectTopicsComponent implements OnInit {
     // throw new Error('Method not implemented.');
     this.blogTitle = localStorage.getItem('blog-title')
     this.blogDesc = localStorage.getItem('blog-description')
-    console.log(this.blogTitle+this.blogDesc)
+    console.log(this.blogTitle + this.blogDesc)
     this.topicService.getTopicSuggestion()
       .subscribe(data => {
         console.log(data)
@@ -77,23 +76,28 @@ export class SelectTopicsComponent implements OnInit {
 
   publishPost() {
     this.getTopicId(this.topics)
-    console.log("afterPublis"+this.blogTitle+this.blogDesc)
+    console.log("afterPublis" + this.blogTitle + this.blogDesc)
     console.log(this.chosenTopicIds)
     this.postService.publishPost(this.blogTitle, this.blogDesc, this.chosenTopicIds)
       .subscribe(data => {
         console.log(data)
-        this.toastr.success('Your article has been publish','', {
-          positionClass: 'toast-top-center'} )
-      },
-      errorMessage =>{
-        console.log(errorMessage)
+        if (data.status === 201) {
+          this.toastr.success('Your article has been published', '', {
+            positionClass: 'toast-top-center'
+          })
+          localStorage.removeItem('blog-title')
+          localStorage.removeItem('blog-description')
+          setTimeout(() => {
+            this.route.navigate(['/dashboard']);
+          }, 2000);
+        }
+        else if (data.status === 204) {
+          this.toastr.error('Fields are empty', '', {
+            positionClass: 'toast-top-center'
+          })
+        }
       }
       )
-    localStorage.removeItem('blog-title')
-    localStorage.removeItem('blog-description')
-    setTimeout(() => {
-      this.route.navigate(['/dashboard']);
-    }, 2000);
   }
 
   goToNewPost() {

@@ -1,17 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+body{
+    background-color: #f7f5f9;
+}
+.mat-typography{
+    background-color: #f7f5f9;
+}
+.read-post-container{
+    height: 100%;
+    background-color: #f7f5f9;
+}
+
 .text-container{
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 5%;
+    background-color: #f7f5f9;
 }
 
 .title{
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 3%;
 }
 
@@ -29,6 +42,8 @@
 
 .content{
     color: #333333;
+    font-size: 15px;
+    /* overflow-y: scroll; */
 }
 
 .buttons{
@@ -36,17 +51,25 @@
     flex-direction: row;
 }
 
+.likes{
+    margin-right: 20%;
+}
+
 .number-of-likes{
     font-family: 'Open Sans', sans-serif;
     color: #333333;
-    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.bookmark{
+    margin-left: 15%;
 }
 
 .name{
     font-size: 10px;
     font-family: 'Open Sans',sans-serif;
     font-weight: 800;
-    margin-left: 5%;
+    margin-left: 8%;
     min-width: fit-content
 }
 
@@ -58,6 +81,19 @@
     min-width: fit-content
 }
 
-.bookmark{
-    margin-left: 10%;
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.911);
+    box-shadow: inset 0 0 6px rgba(168, 166, 166, 0.5);
 }

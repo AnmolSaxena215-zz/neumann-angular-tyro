@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.emptylist{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    color: #1c437e;
+    display: flex;
+    justify-content: center;
+}
+
 .blog-list {
     display: flex;
     flex-direction: column;

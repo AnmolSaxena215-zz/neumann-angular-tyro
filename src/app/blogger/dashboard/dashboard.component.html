@@ -5,7 +5,7 @@
         </div>
         <div class="topics-to-follow-topic-list">
             <div class="topics-to-follow-topics-list" *ngFor="let topic of topicToFollow">
-                <div class="name">
+                <div class="topicname">
                     {{ topic.topic.topicName }}
                 </div>
                 <div class="topics-to-follow">
@@ -18,6 +18,9 @@
                         {{topic.hasFollowed? 'Following' : 'Follow'}}
                     </button>
                 </div>
+            </div>
+            <div class="saying">
+                All good things must come to an end
             </div>
         </div>
     </mat-sidenav>
@@ -62,7 +65,7 @@
                 <div class="posts">
                     <app-blog-list></app-blog-list>
                 </div>
-                <div class="follow">
+                <div class="follow" >
                     <div class="people">
                         <app-people></app-people>
                         <a (click)="sidenav1.toggle()" class="see-more-people">

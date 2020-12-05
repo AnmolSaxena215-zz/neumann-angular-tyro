@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 .main-container {
     overflow-y: scroll;
     height: 100vh;
@@ -65,7 +65,7 @@
 }
 
 .people {
-    /* display: flex; */
+    display: flex;
     flex-basis: 30%;
     flex-direction: row;
     max-width: 35vh;
@@ -124,7 +124,7 @@ mat-sidenav-content {
 }
 
 .topics-to-follow-topic-list {
-    padding-left: 3%;
+    padding-left: 5%;
     padding-top: 5%;
 }
 
@@ -137,7 +137,16 @@ mat-sidenav-content {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     font-size: large;
     font-weight: bolder;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
+}
+
+.saying{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    color: #333333;
+    font-weight: 100;
+    font-family: 'Open Sans',sans-serif;
 }
 
 button {
@@ -162,7 +171,7 @@ button {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     font-size: large;
     font-weight: bold;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 .pic {
@@ -186,6 +195,14 @@ button {
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     margin-bottom: 5%;
+    font-size: smaller;
+}
+
+.topicname{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    /* margin-bottom: 2%; */
+    font-size: small;
 }
 
 .name-follow{
@@ -195,14 +212,15 @@ button {
 .plus{
     height: 40px;
     width: 40px;
-    margin-left: 9%;
+    margin-left: 50%;
 }
 
 .see-more-text{
-    width: fit-content;
+    width: 10vh;
     font-size: smaller;
     font-weight: 900;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 4%;
 }
 
 a{
@@ -236,7 +254,7 @@ a{
     border: none;
 }
 
-.following{
+.following{ 
     background-color: #1c437e;
     color: white; 
     border: none;
@@ -247,4 +265,9 @@ a{
     padding: 0px;
     border-radius: 4px;
     line-height: 15px;
+}
+
+.see-more-people{
+    margin-left: 35%;
+    margin-top: 15%;
 }

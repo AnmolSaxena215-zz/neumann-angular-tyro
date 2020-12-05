@@ -26,13 +26,13 @@ img{
     font-size: smaller;
     padding-top: 2px;
     text-align: center;
-    letter-spacing: 0.75px;
+    letter-spacing: 0.25px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
 }
 
 .people {
-    margin-bottom: 4%;
+    margin-bottom: 10%;
     font-size: smaller;
     font-weight: bold;
     letter-spacing: .75px;

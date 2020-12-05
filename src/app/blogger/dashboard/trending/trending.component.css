@@ -24,7 +24,7 @@ span{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: large;
-    letter-spacing: .75px;
+    /* letter-spacing: .75px; */
 }
 
 .blogs{
@@ -76,10 +76,10 @@ a{
 .name{
     padding-top: 1%;
     padding-left: 3%;
-    font-size: x-small;
+    font-size: 10px;
     font-weight: 900;
     font-family: 'Open Sans', sans-serif;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
 }
 
 .title{
@@ -87,7 +87,7 @@ a{
     font-size: small;
     line-height: normal;
     font-weight: 900;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
 }
 
 .date{
