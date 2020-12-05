@@ -15,6 +15,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';;
 import { BloggerModule } from './blogger/blogger.module';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,10 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     BloggerModule,
     MatAutocompleteModule,
     MatChipsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ToastrModule.forRoot({
+      timeOut : 1500
+    })
   ],
   providers: [
     {

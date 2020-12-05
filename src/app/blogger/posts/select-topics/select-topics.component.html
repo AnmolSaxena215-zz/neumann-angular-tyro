@@ -1,5 +1,7 @@
 <div class="page">
-  <div class="cross"><button type="button" class="cross1" (click)="goToNewPost()">x</button></div>
+  <div class="cross">
+    <img class="cross-mark" src="../../../../assets/images//cancel.png" (click)="goToNewPost()">
+  </div>
   <div class="text">
     <p>Add upto 5 topics so that readers know what your post is about</p>
   </div>
@@ -10,7 +12,7 @@
           <mat-chip class="mat-chip-color" *ngFor="let topic of topics" [selectable]="selectable"
             [removable]="removable" (removed)="remove(topic)">
             {{topic}}
-            <mat-icon matChipRemove *ngIf="removable"><span>x</span></mat-icon>
+            <mat-icon matChipRemove *ngIf="removable"><span class="cancel">x</span></mat-icon>
           </mat-chip>
           <input #topicInput [formControl]="topicCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
             [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">

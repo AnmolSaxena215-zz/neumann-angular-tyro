@@ -2,7 +2,7 @@
     <div class="TitleBar">
         <div class="home">
             <button type="button" class="home1">
-                <img alt="Logo" src="/assets/images/group.png" width="45" height="40" class="logo">
+                <img alt="Logo" src="/assets/images/group.png" width="45" height="40" class="logo" (click)="goToDashboard()">
             </button>
         </div>
         <div class="tyro">
@@ -34,12 +34,12 @@
                 <div class="title">
                     <input type="text" formControlName="title" placeholder="Title" class="inside">
                     <span *ngIf="" class="invalid"
-                        title="The title should be of minimum 10 characters"></span>
+                        title="The title should be of minimum 10 characters and the description should be of minimum 100 characters"></span>
                 </div>
                 <div class="post">
                     <textarea class="description" formControlName="description" placeholder="Type Something"></textarea>
                     <span *ngIf="!blogForm.valid && blogForm.touched" class="invalid"
-                        title="The description should be of minimum 100 characters"></span>
+                        title="The title should be of minimum 10 characters and the description should be of minimum 100 characters"></span>
                 </div>
             </div>
         </form>

@@ -32,4 +32,8 @@ export class NewPostComponent implements OnInit {
     this.route.navigate(['select-topics'])
   }
 
+  goToDashboard(){
+    this.route.navigate(['/dashboard'])
+  }
+
 }

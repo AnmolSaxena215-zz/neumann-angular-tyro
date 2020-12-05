@@ -66,7 +66,7 @@
 
 .people {
     /* display: flex; */
-    flex-basis: 50%;
+    flex-basis: 30%;
     flex-direction: row;
     max-width: 35vh;
 }
@@ -103,7 +103,7 @@ mat-sidenav-container {
 
 .sidenav2 {
     background-color: #f7f5f9;
-    width: 265px;
+    width: 275px;
 }
 
 mat-sidenav-content {
@@ -209,4 +209,42 @@ a{
     text-decoration: none;
     color: black;
     align-items: center;
+}
+
+.see-more{
+    max-width: 10px;
+}
+
+.toFollow{
+    text-align: center;
+    font-size: 10px;
+    width: 65px;
+    height: 18px;
+    padding: 0px;
+    border-radius: 4px;
+    line-height: 15px;
+}
+
+.toFollowTopics{
+    border-radius: 4px;
+}
+
+.followingTopics{
+    border-radius: 4px;
+    background-color: #1c437e;
+    color: white; 
+    border: none;
+}
+
+.following{
+    background-color: #1c437e;
+    color: white; 
+    border: none;
+    text-align: center;
+    font-size: 10px;
+    width: 65px;
+    height: 18px;
+    padding: 0px;
+    border-radius: 4px;
+    line-height: 15px;
 }

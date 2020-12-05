@@ -5,11 +5,12 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatAutocomplete } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { map, startWith, timeout } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { TopicService } from '../../services/topic.service';
 import { PostService } from '../../services/post.service';
 import { Location } from '@angular/common'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-select-topics',
@@ -40,7 +41,7 @@ export class SelectTopicsComponent implements OnInit {
     private route: Router,
     private topicService: TopicService,
     private postService: PostService,
-    private location : Location
+    private toastr : ToastrService
   ) {
     this.filteredtopics = this.topicCtrl.valueChanges.pipe(
       startWith(null),
@@ -81,10 +82,18 @@ export class SelectTopicsComponent implements OnInit {
     this.postService.publishPost(this.blogTitle, this.blogDesc, this.chosenTopicIds)
       .subscribe(data => {
         console.log(data)
-      })
+        this.toastr.success('Your article has been publish','', {
+          positionClass: 'toast-top-center'} )
+      },
+      errorMessage =>{
+        console.log(errorMessage)
+      }
+      )
     localStorage.removeItem('blog-title')
     localStorage.removeItem('blog-description')
-    this.route.navigate(['/dashboard'])
+    setTimeout(() => {
+      this.route.navigate(['/dashboard']);
+    }, 2000);
   }
 
   goToNewPost() {

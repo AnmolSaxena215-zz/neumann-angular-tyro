@@ -9,12 +9,11 @@
                     {{ topic.topic.topicName }}
                 </div>
                 <div class="topics-to-follow">
-                    <button class="follow-button" style="background-color: #1c437e;color: white; border: none;"
-                        class="following" *ngIf="topic.hasFollowed===true"
+                    <button class="followingTopics" *ngIf="topic.hasFollowed===true"
                         (click)="onClickTopics(topic.topic._id, topic.hasFollowed)">
                         {{topic.hasFollowed? 'Following' : 'Follow'}}
                     </button>
-                    <button class="toFollow" *ngIf="topic.hasFollowed===false"
+                    <button class="toFollowTopics" *ngIf="topic.hasFollowed===false"
                         (click)="onClickTopics(topic.topic._id,topic.hasFollowed)">
                         {{topic.hasFollowed? 'Following' : 'Follow'}}
                     </button>
@@ -36,8 +35,7 @@
                         {{people.user.name}}
                     </div>
                     <div class="people-follow-button">
-                        <button class="follow-button" style="background-color: #1c437e;color: white; border: none;"
-                            class="following" *ngIf="people.hasFollowed===true"
+                        <button class="following" *ngIf="people.hasFollowed===true"
                             (click)="onClickPeople(people.user._id, people.hasFollowed)">
                             {{people.hasFollowed? 'Following' : 'Follow'}}
                         </button>
@@ -67,7 +65,7 @@
                 <div class="follow">
                     <div class="people">
                         <app-people></app-people>
-                        <a (click)="sidenav1.toggle()" class="see-more-people"> 
+                        <a (click)="sidenav1.toggle()" class="see-more-people">
                             <div class="see-more">
                                 <img src="../../../../assets/images/plus.png" class="plus">
                             </div>
