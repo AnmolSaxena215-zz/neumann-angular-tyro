@@ -7,7 +7,7 @@ export class RelativeTimePipe implements PipeTransform {
 
   transform(value: any): any {
     if (value) {
-      const differenceInSeconds = Math.floor((+new Date() - +new Date(value)) / 1000);
+      const differenceInSeconds = Math.floor((+new Date() - +new Date(value*1000)) / 1000);
       // less than 30 seconds ago will show as 'Just now'
       if (differenceInSeconds < 30){
         return 'Just now';

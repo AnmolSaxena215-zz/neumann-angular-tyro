@@ -20,7 +20,7 @@
             </div>
             <div class="buttons">
                 <div class="likes">
-                    <img src="../../../../assets/images/red-heart.png" (click)="liked(blog.article._id, blog.hasLiked)"
+                    <img src="../../../../assets/images/liked.png" (click)="liked(blog.article._id, blog.hasLiked)"
                         *ngIf="blog.hasLiked===true">
                     <img src="../../../../assets/images/heart.png" (click)="liked(blog.article._id, blog.hasLiked)"
                         *ngIf="blog.hasLiked===false">

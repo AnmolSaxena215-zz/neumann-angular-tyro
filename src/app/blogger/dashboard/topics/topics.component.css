@@ -6,7 +6,7 @@
 }
 
 .topics{
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: smaller;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -15,7 +15,7 @@
 .topic-list {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    margin-top: 1%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     font-family: 800;

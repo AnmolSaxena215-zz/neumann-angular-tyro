@@ -82,7 +82,7 @@ export class SelectTopicsComponent implements OnInit {
       .subscribe(data => {
         console.log(data)
         if (data.status === 201) {
-          this.toastr.success('Your article has been published', '', {
+          this.toastr.success('Publish successful', '', {
             positionClass: 'toast-top-center'
           })
           localStorage.removeItem('blog-title')
@@ -92,7 +92,12 @@ export class SelectTopicsComponent implements OnInit {
           }, 2000);
         }
         else if (data.status === 204) {
-          this.toastr.error('Fields are empty', '', {
+          this.toastr.error('Atleast one topic needed', '', {
+            positionClass: 'toast-top-center'
+          })
+        }
+        else{
+          this.toastr.error('Missing title and content', '', {
             positionClass: 'toast-top-center'
           })
         }

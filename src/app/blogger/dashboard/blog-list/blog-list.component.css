@@ -39,7 +39,7 @@ img {
     font-weight: 900;
     font-size: medium;
     padding-top: 4px;
-    letter-spacing: 0.75px;
+    /* letter-spacing: 0.75px; */
 }
 
 .name {
@@ -47,7 +47,7 @@ img {
     font-size: x-small;
     font-weight: 900;
     font-family: 'Open Sans', sans-serif;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
 }
 
 .description {

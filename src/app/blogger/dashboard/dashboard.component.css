@@ -78,7 +78,7 @@
 /* Sidenav for topics to follow */
 
 .see-more-topics {
-    margin-top: 1%;
+    margin-top: 2%;
     font-size: x-small;
     font-weight: bolder;
     font-family: 'Open Sans', sans-serif;
@@ -176,12 +176,12 @@ button {
 
 .pic {
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 .people-to-follow {
-    padding-top: 5%;
+    padding-top: 18%;
     padding-left: 10%;
 }
 
@@ -189,6 +189,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 10%;
 }
 
 .name{
@@ -212,12 +213,12 @@ button {
 .plus{
     height: 40px;
     width: 40px;
-    margin-left: 50%;
+    margin-left: 40%;
 }
 
 .see-more-text{
     width: 10vh;
-    font-size: smaller;
+    font-size: x-small;
     font-weight: 900;
     font-family: 'Open Sans', sans-serif;
     margin-top: 4%;
@@ -269,5 +270,5 @@ a{
 
 .see-more-people{
     margin-left: 35%;
-    margin-top: 15%;
+    margin-top: 18.75%;
 }

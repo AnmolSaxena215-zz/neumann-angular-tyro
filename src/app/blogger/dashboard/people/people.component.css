@@ -11,7 +11,8 @@
 }
 
 .blog-list {
-    margin-right: 20%;
+    margin-left: 2%;
+    margin-right: 15%;
 }
 
 .pics{
@@ -23,7 +24,7 @@ img{
 }
 
 .name{
-    font-size: smaller;
+    font-size: x-small;
     padding-top: 2px;
     text-align: center;
     letter-spacing: 0.25px;
@@ -32,7 +33,7 @@ img{
 }
 
 .people {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     font-size: smaller;
     font-weight: bold;
     letter-spacing: .75px;

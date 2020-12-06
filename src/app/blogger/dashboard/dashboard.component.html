@@ -65,7 +65,7 @@
                 <div class="posts">
                     <app-blog-list></app-blog-list>
                 </div>
-                <div class="follow" >
+                <div class="follow">
                     <div class="people">
                         <app-people></app-people>
                         <a (click)="sidenav1.toggle()" class="see-more-people">
@@ -79,9 +79,11 @@
                     </div>
                     <div class="topics">
                         <app-topics></app-topics>
-                        <a (click)="sidenav.toggle()" class="see-more-topics">
-                            See More
-                        </a>
+                        <div class="see-more-topics">
+                            <a (click)="sidenav.toggle()">
+                                See More
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
