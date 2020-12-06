@@ -23,7 +23,7 @@
                         {{ blog.title}}
                     </a>
                 </div>
-                <div class="date">{{ blog.createdAt | date:'MMM d' }}</div>
+                <div class="date">{{ blog.createdAt*1000 | date:'MMM d' }}</div>
             </div>
         </div>
     </div>
