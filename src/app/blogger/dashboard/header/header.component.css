@@ -125,3 +125,43 @@ button{
 .profile2{
     border-radius: 50%;
 }
+
+.notifications{
+    background-color: #ffff;
+
+}
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(93, 93, 93, 0.3);
+    padding: 3%;
+}
+
+.pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profilePic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.articleDetails{
+    margin-left: 4%;
+    font-size: small;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.time{
+    font-size: x-small;
+    font-weight: 100;
+}

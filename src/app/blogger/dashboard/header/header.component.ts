@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { NotificationsService } from '../../services/notifications.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,10 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  notifcations : any
+  constructor(
+    private notService : NotificationsService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +25,14 @@ export class HeaderComponent implements OnInit {
 
   goToBookmarks(){
     this.router.navigate(['/bookmarks'])
+  }
+
+  displayNotifications(){
+    this.notService.getNotifications()
+    .subscribe(data =>{
+      console.log(data)
+      this.notifcations=data
+    })
   }
 
 }

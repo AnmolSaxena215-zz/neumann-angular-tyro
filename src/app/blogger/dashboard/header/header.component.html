@@ -1,5 +1,5 @@
 <div class="TitleBar">
-    
+
     <div class="home">
         <button type="button" class="home1" (click)="goToDashboard()">
             <img alt="Logo" src="/assets/images/group.png" width="45" height="40" class="logo">
@@ -15,7 +15,30 @@
         Good evening
     </div>
     <div class="bell">
-        <button type="button" class="bell1">
+        <ng-template #popContent>
+            <div class="notifications" *ngFor="let not of notifcations;let i = index;">
+                <div class="notification">
+                    <div class="profilePic">
+                        <img src={{not.profilePictureUrl}} alt="profile" class="pic">
+                    </div>
+                    <div class="articleDetails">
+                        <div class="content-title">
+                            <div class="content">
+                                {{not.content}}
+                            </div>
+                            <div class="title">
+                                {{not.articleTitle}}
+                            </div>
+                        </div>
+                        <div class="time">
+                            {{not.createdAt*1000 | date:'MMM d'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <button type="button" class="bell1" [ngbPopover]="popContent" placement="bottom"
+            (click)="displayNotifications()">
             <img alt="Bell" src="/assets/images/bell.png" width="25" height="30">
         </button>
     </div>
@@ -24,11 +47,11 @@
             <img alt="Bell" src="/assets/images/wish-list.png" width="20" height="30">
         </button>
     </div>
-    <div class="post-button"> 
+    <div class="post-button">
         <button name="new-post" class="new-post" type="button" (click)="goToNewPost()">NEW POST</button>
     </div>
     <div class="profile">
-        <button type="button" class="profile1" >
+        <button type="button" class="profile1">
             <img class="profile2" alt="Profile" src="/assets/images/girldp3-cropped.jpg" width="38" height="38">
         </button>
     </div>

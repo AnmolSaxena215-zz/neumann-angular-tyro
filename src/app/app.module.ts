@@ -7,6 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { NgbModule, NgbPopover, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatAutocompleteModule,
     MatChipsModule,
     MatFormFieldModule,
+    NgbPopoverModule,
     ToastrModule.forRoot({
       timeOut : 1500
     })
