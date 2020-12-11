@@ -91,16 +91,18 @@ export class SelectTopicsComponent implements OnInit {
             this.route.navigate(['/dashboard']);
           }, 2000);
         }
+        
         else if (data.status === 204) {
           this.toastr.error('Atleast one topic needed', '', {
             positionClass: 'toast-top-center'
           })
         }
-        else{
-          this.toastr.error('Missing title and content', '', {
-            positionClass: 'toast-top-center'
-          })
-        }
+      },
+      errorResposne =>{
+        console.log(errorResposne)
+        this.toastr.error('Missing title and content', '', {
+          positionClass: 'toast-top-center'
+        })
       }
       )
   }
